@@ -1,5 +1,5 @@
 # An Anatomy of Vision-Language-Action Models  
-### From Modules to Milestones and Challenges 
+### From Modules to Milestones and Challenges  
 
 [![Paper](https://img.shields.io/badge/arXiv-2512.11362-b31b1b.svg)](https://arxiv.org/abs/2512.11362) [![Project Page](https://img.shields.io/badge/Project-Website-blue)](https://suyuz1.github.io/Survery/)
 
@@ -397,4 +397,5 @@ If you find this repository useful, please cite:
 This is a **living survey**.Contributions, corrections, and new papers are welcome.
 
 Feel free to contact: zsy993115095@gmail.com
+
 
