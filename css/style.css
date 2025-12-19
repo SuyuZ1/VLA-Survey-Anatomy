@@ -1,0 +1,437 @@
+@font-face {
+    font-family: 'Product Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+}
+
+h1, h2, h3, h4, h5 {
+    color: #555555;
+}
+
+.conf {
+    color: #990012;
+}
+
+body {
+    font-family: "Product Sans", Helvetica, sans-serif;
+    color: #787878;
+}
+
+a {
+    -moz-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    -webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    -ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    border-bottom: dotted 1px;
+    color: #1693f3;
+    text-decoration: none;
+}
+
+a:hover {
+    border-bottom-color: transparent;
+    color: #1693f3 !important;
+    text-decoration: none;
+}
+
+/* Table specific styles */
+.table {
+    font-size: 14px;
+}
+
+.table th {
+    background-color: #f8f9fa;
+    color: #555555;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+}
+
+.table th:hover {
+    background-color: #e9ecef;
+}
+
+.sortable:after {
+    content: ' ↕';
+    opacity: 0.5;
+    font-size: 12px;
+}
+
+.sort-asc:after {
+    content: ' ↑';
+    opacity: 1;
+}
+
+.sort-desc:after {
+    content: ' ↓';
+    opacity: 1;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+.table td.wrap {
+    white-space: normal;
+    max-width: 300px;
+}
+
+/* Tag styles */
+.tag {
+    display: inline-block;
+    padding: 2px 8px;
+    margin: 2px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* Category colors */
+.tag-category-end-to-end { background-color: #e74c3c; color: white; }
+.tag-category-hierarchical { background-color: #9b59b6; color: white; }
+.tag-category-planning { background-color: #3498db; color: white; }
+.tag-category-affordance { background-color: #1abc9c; color: white; }
+.tag-category-prediction { background-color: #f39c12; color: white; }
+.tag-category-rl { background-color: #e67e22; color: white; }
+.tag-category-dataset { background-color: #34495e; color: white; }
+.tag-category-evaluation { background-color: #7f8c8d; color: white; }
+.tag-category-device { background-color: #16a085; color: white; }
+.tag-category-open-source { background-color: #27ae60; color: white; }
+.tag-category-review { background-color: #2c3e50; color: white; }
+.tag-category-special { background-color: #8e44ad; color: white; }
+.tag-category-vlm-for-robotics { background-color: #d35400; color: white; }
+.tag-category-3d { background-color: #c0392b; color: white; }
+.tag-category-policy { background-color: #2980b9; color: white; }
+.tag-category-cross-embodiment { background-color: #f1c40f; color: #2c3e50; }
+.tag-category-audio { background-color: #ff6b6b; color: white; }
+.tag-category-tactile { background-color: #4ecdc4; color: white; }
+.tag-category-humanoid { background-color: #95a5a6; color: white; }
+.tag-category-failure-recovery { background-color: #fd79a8; color: white; }
+.tag-category-training { background-color: #a29bfe; color: white; }
+.tag-category-augmentation { background-color: #00b894; color: white; }
+.tag-category-application-oriented { background-color: #636e72; color: white; }
+
+/* Task colors */
+.tag-task-manipulation { background-color: #3498db; color: white; }
+.tag-task-navigation { background-color: #2ecc71; color: white; }
+.tag-task-grasp { background-color: #e74c3c; color: white; }
+.tag-task-move-base { background-color: #f39c12; color: white; }
+.tag-task-bi-manual { background-color: #9b59b6; color: white; }
+.tag-task-dexterous-hand { background-color: #1abc9c; color: white; }
+.tag-task-whole-body-control { background-color: #34495e; color: white; }
+.tag-task-peg-in-hole { background-color: #e67e22; color: white; }
+.tag-task-autonomous-driving { background-color: #c0392b; color: white; }
+.tag-task-game { background-color: #8e44ad; color: white; }
+.tag-task-surgery { background-color: #d35400; color: white; }
+.tag-task-human-cooperation { background-color: #7f8c8d; color: white; }
+.tag-task-interaction { background-color: #27ae60; color: white; }
+
+/* Modality colors */
+.tag-modality-vision { background-color: #3498db; color: white; }
+.tag-modality-language { background-color: #2ecc71; color: white; }
+.tag-modality-proprioception { background-color: #e74c3c; color: white; }
+.tag-modality-pointcloud { background-color: #9b59b6; color: white; }
+.tag-modality-depth { background-color: #f39c12; color: white; }
+.tag-modality-audio { background-color: #e67e22; color: white; }
+.tag-modality-tactile { background-color: #1abc9c; color: white; }
+
+/* Default tag */
+.tag-default { background-color: #95a5a6; color: white; }
+
+/* Evaluation colors - Major benchmarks */
+.tag-evaluation-adroit { background-color: #e74c3c; color: white; }
+.tag-evaluation-dexart { background-color: #3498db; color: white; }
+.tag-evaluation-metaworld { background-color: #2ecc71; color: white; }
+.tag-evaluation-ravens { background-color: #9b59b6; color: white; }
+.tag-evaluation-calvin { background-color: #e67e22; color: white; }
+.tag-evaluation-simpler { background-color: #34495e; color: white; }
+.tag-evaluation-libero { background-color: #16a085; color: white; }
+.tag-evaluation-rlbench { background-color: #c0392b; color: white; }
+.tag-evaluation-rlbench2 { background-color: #a93226; color: white; }
+.tag-evaluation-mimicgen { background-color: #d17ff5; color: white; }
+.tag-evaluation-language-table { background-color: #7f8c8d; color: white; }
+.tag-evaluation-bridgev2 { background-color: #2980b9; color: white; }
+.tag-evaluation-maniskill2 { background-color: #1abc9c; color: white; }
+.tag-evaluation-maniskill-hab { background-color: #16a085; color: white; }
+.tag-evaluation-vima-bench { background-color: #d35400; color: white; }
+.tag-evaluation-habitat { background-color: #27ae60; color: white; }
+.tag-evaluation-ai2thor { background-color: #229954; color: white; }
+.tag-evaluation-frankakitchen { background-color: #f39c12; color: white; }
+.tag-evaluation-droid { background-color: #af7ac5; color: white; }
+.tag-evaluation-sapien { background-color: #5d6d7e; color: white; }
+.tag-evaluation-robocasa { background-color: #e74c3c; color: white; }
+.tag-evaluation-openeqa { background-color: #3498db; color: white; }
+.tag-evaluation-robovqa { background-color: #9b59b6; color: white; }
+.tag-evaluation-gembench { background-color: #f1c40f; color: #2c3e50; }
+.tag-evaluation-ogbench { background-color: #e67e22; color: white; }
+.tag-evaluation-blink { background-color: #1abc9c; color: white; }
+.tag-evaluation-arnold { background-color: #90b9e4; color: white; }
+.tag-evaluation-ovmm { background-color: #16a085; color: white; }
+.tag-evaluation-matterport3d { background-color: #c0392b; color: white; }
+.tag-evaluation-kinetix { background-color: #8e44ad; color: white; }
+.tag-evaluation-dexmimiggen { background-color: #d35400; color: white; }
+.tag-evaluation-robotwin { background-color: #27ae60; color: white; }
+.tag-evaluation-int-act { background-color: #2980b9; color: white; }
+.tag-evaluation-agd20k { background-color: #7f8c8d; color: white; }
+.tag-evaluation-erqa { background-color: #e74c3c; color: white; }
+.tag-evaluation-evt-bench { background-color: #3498db; color: white; }
+.tag-evaluation-realworldqa { background-color: #9b59b6; color: white; }
+.tag-evaluation-sharerobot-qa { background-color: #f39c12; color: white; }
+.tag-evaluation-spatialbench { background-color: #1abc9c; color: white; }
+.tag-evaluation-open6dor { background-color: #e67e22; color: white; }
+.tag-evaluation-gym-unrealcv { background-color: #34495e; color: white; }
+.tag-evaluation-colosseum { background-color: #16a085; color: white; }
+.tag-evaluation-ego-humanoid-manipulation-benchmark { background-color: #c0392b; color: white; }
+
+/* Domain colors */
+.tag-domain-tabletop { background-color: #3498db; color: white; }
+.tag-domain-kitchen { background-color: #e74c3c; color: white; }
+.tag-domain-navigation { background-color: #2ecc71; color: white; }
+.tag-domain-manipulation { background-color: #9b59b6; color: white; }
+.tag-domain-grasp { background-color: #f39c12; color: white; }
+.tag-domain-indoor { background-color: #1abc9c; color: white; }
+.tag-domain-autonomous-driving { background-color: #34495e; color: white; }
+.tag-domain-dexterous-hand { background-color: #e67e22; color: white; }
+.tag-domain-bi-manual { background-color: #16a085; color: white; }
+.tag-domain-whole-body-control { background-color: #c0392b; color: white; }
+.tag-domain-move-base { background-color: #8e44ad; color: white; }
+.tag-domain-game { background-color: #d35400; color: white; }
+.tag-domain-meta { background-color: #7f8c8d; color: white; }
+
+/* Challenge Tag colors - exact mapping from user spec */
+.tag-challenge-fusion { background-color: #eee991; color: #000; }
+.tag-challenge-execution { background-color: #e59f52; color: #000; }
+.tag-challenge-generalization { background-color: #d4d4d4; color: #000; }
+.tag-challenge-security { background-color: #7aa4c9; color: #000; }
+.tag-challenge-dataset { background-color: #b3e5a3; color: #000; }
+
+/* Dataset and Evaluation colors - single neutral color */
+.tag-dataset-eval { background-color: #ECEFF1; color: #37474F; }
+
+/* Search highlight */
+mark {
+    background-color: #ffeb3b;
+    color: #000;
+    font-weight: bold;
+    padding: 0 2px;
+    border-radius: 2px;
+}
+
+/* Loading */
+.loading {
+    padding: 50px;
+    font-size: 18px;
+    color: #787878;
+}
+
+/* Filters */
+.filters label {
+    font-weight: 600;
+    color: #555555;
+    font-size: 14px;
+}
+
+/* Pagination */
+.pagination-wrapper {
+    font-size: 14px;
+}
+
+.records-info {
+    color: #787878;
+}
+
+.pagination-controls button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Pre-formatted text */
+pre {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 4px;
+    font-size: 13px;
+    overflow-x: auto;
+}
+
+/* Figure styles */
+.figure {
+    margin-bottom: 20px;
+}
+
+.figure-img {
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    max-width: 60%;
+    height: auto;
+}
+
+.figure-caption {
+    margin-top: 10px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .table {
+        font-size: 12px;
+    }
+    
+    .tag {
+        font-size: 10px;
+        padding: 2px 4px;
+    }
+    
+    .embed-responsive-16by9 {
+        padding-bottom: 75%; /* Adjust aspect ratio for mobile */
+    }
+}
+
+/* Fix table layout to maintain consistent width */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.table-responsive::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 100%;
+    pointer-events: none;
+    background: linear-gradient(to left, rgb(233, 237, 245), rgba(248,249,251,0));
+}
+
+#surveyTable {
+    table-layout: auto;
+    min-width: 1200px;
+}
+
+/* Ensure table cells wrap instead of stretching */
+#surveyTable th:nth-child(1),
+#surveyTable td:nth-child(1) {
+    width: 150px;   /*  列固定宽度 */
+}
+#surveyTable th:nth-child(2),
+#surveyTable td:nth-child(2) {
+    width: 120px;   /* Year 列固定宽度 */
+}
+#surveyTable td, 
+#surveyTable th {
+    word-wrap: break-word;
+    white-space: normal;
+}
+#surveyTable th:nth-child(4),
+#surveyTable td:nth-child(4) {
+    width: 220px;   /* Challenge Tag 列固定宽度 */
+}
+#surveyTable th:nth-child(5),
+#surveyTable td:nth-child(5) {
+    width: 200px;   /* Sub-Challenge Tag 列固定宽度 */
+}
+#surveyTable th:nth-child(6),
+#surveyTable td:nth-child(6) {
+    width: 220px;   /* How to Solve 列固定宽度 */
+}
+
+/* Latest Papers Horizontal Scroll */
+/* Horizontal scroll */
+.latest-scroll-wrapper {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 10px;
+}
+
+.latest-scroll {
+    display: inline-flex;
+    gap: 15px;
+}
+
+/* Card layout */
+.latest-card {
+    min-width: 440px;
+    max-width: 440px;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 15px 18px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    white-space: normal;
+    transition: 0.2s;
+}
+
+.latest-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.latest-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: #1c2e4a;
+}
+
+.latest-subtitle {
+    font-size: 13px;
+    font-weight: 500;
+    color: #52627a;
+    margin-top: 4px;
+}
+
+.latest-section-label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #7a869a;
+    margin-top: 10px;
+    margin-bottom: 2px;
+}
+
+.latest-section {
+    padding: 20px 24px;
+    background: #ebeff7;
+    border-radius: 12px;
+}
+
+.latest-header {
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e4e7ec;
+    margin-bottom: 16px;
+}
+
+.latest-meta {
+    font-size: 0.9rem;
+    color: #5f6c7b;
+}
+
+#latestUpdatedDate {
+    margin-left: 6px;
+    font-weight: 500;
+    /* 字体加粗 */
+    font-weight: bold;
+    color: #34495e;
+}
+
+.latest-controls select {
+    min-width: 140px;
+}
+
+.latest-empty {
+    padding: 40px;
+    text-align: center;
+    color: #6b7280;
+}
+
+.latest-empty-title {
+    font-weight: 600;
+    margin-bottom: 6px;
+}

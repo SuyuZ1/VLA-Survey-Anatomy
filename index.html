@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>An Anatomy of Vision-Language-Action Models: From Modules to Milestones and Challenges</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="A comprehensive survey of Vision-Language-Action models, covering modules, milestones, and key challenges in embodied intelligence.">
+    <meta name="keywords" content="survey, research, paper">
+    <meta name="author" content="Chao Xu, Suyu Zhang, Yang Liu, Baigui Sun, Weihong Chen, Bo Xu, Qi Liu, Juncheng Wang, Shujun Wang, Shan Luo, Jan Peters, Athanasios V. Vasilakos, Stefanos Zafeiriou, Jiankang Deng">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arxiv.org/abs/2512.11362">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="An Anatomy of Vision-Language-Action Models: From Modules to Milestones and Challenges">
+    <meta property="og:description" content="Survey paper description placeholder">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="#">
+    <meta property="og:image" content="imgs/main_image.png">
+    <meta property="og:site_name" content="Survey Paper">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="An Anatomy of Vision-Language-Action Models: From Modules to Milestones and Challenges">
+    <meta name="twitter:description" content="Survey paper description placeholder">
+    <meta name="twitter:image" content="imgs/main_image.png">
+    
+    <title>An Anatomy of Vision-Language-Action Models: From Modules to Milestones and Challenges</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=2">
+
+    <style>
+        /* arXiv  */
+        .arxiv-button {
+            display: inline-flex;
+            align-items: center;
+            background-color: #343a3f;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            margin: 5px;
+        }
+        
+        .arxiv-button:hover {
+            background-color: #5a6268;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .arxiv-button img {
+            height: 20px;
+            width: auto;
+            margin-right: 8px;
+        }
+        
+        .arxiv-button i {
+            font-size: 18px;
+            margin-right: 8px;
+        }
+        
+        /* Timeline 图片样式优化 */
+        .timeline-container {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin: 30px 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .timeline-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .timeline-figure {
+            margin: 0;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        .timeline-image {
+            width: 100%;
+            max-width: 1200px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .timeline-image:hover {
+            transform: scale(1.02);
+        }
+        
+        .timeline-caption {
+            margin-top: 15px;
+            font-size: 0.95em;
+            color: #555;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1 col-md-12">
+
+                <div class="text-center">
+                    <h2 class="mt-5"><b>An Anatomy of Vision-Language-Action Models:<br>From Modules to Milestones and Challenges</b></h2>
+                    <!-- <h4 class="mt-4 conf"><b>TPAMI</b></h4> -->
+
+                <ul class="list-inline mt-4">
+                    <li class="list-inline-item">Chao Xu<sup>(a,b)</sup></li>
+                    <li class="list-inline-item ml-3">Suyu Zhang<sup>(a,b)</sup></li>
+                    <li class="list-inline-item ml-3">Yang Liu<sup>(a,b,c)</sup></li>
+                    <li class="list-inline-item ml-3">Baigui Sun<sup>(a,b)</sup></li>
+                    <li class="list-inline-item ml-3">Weihong Chen<sup>(a,b)</sup></li>
+                    <li class="list-inline-item ml-3">Bo Xu<sup>(a,b)</sup></li>
+                    <li class="list-inline-item ml-3">Qi Liu<sup>(a,b)</sup></li>
+                    <li class="list-inline-item ml-3">Juncheng Wang<sup>(d)</sup></li>
+                    <li class="list-inline-item ml-3">Shujun Wang<sup>(d)</sup></li>
+                    <li class="list-inline-item ml-3">Shan Luo<sup>(c)</sup></li>
+                    <li class="list-inline-item ml-3">Jan Peters<sup>(e)</sup></li>
+                    <li class="list-inline-item ml-3">Athanasios V. Vasilakos<sup>(f)</sup></li>
+                    <li class="list-inline-item ml-3">Stefanos Zafeiriou<sup>(g)</sup></li>
+                    <li class="list-inline-item ml-3">Jiankang Deng<sup>(g)</sup></li>
+
+                    <li class="mt-2">
+                        <sup>(a)</sup> IROOTECH TECHNOLOGY<br>
+                        <sup>(b)</sup> Wolf 1069 b Lab, Sany Group<br>
+                        <sup>(c)</sup> Department of Engineering, King's College London<br>
+                        <sup>(d)</sup> The Hong Kong Polytechnic University<br>
+                        <sup>(e)</sup> Computer Science Department, Technische Universität Darmstadt<br>
+                        <sup>(f)</sup> Department of ICT and Center for AI Research, University of Agder (UiA)<br>
+                        <sup>(g)</sup> Department of Computing, Imperial College London
+                    </li>
+                </ul>
+
+                    <!-- Paper Download Buttons -->
+                    <div class="mt-4 mb-5 text-center d-flex justify-content-center">
+                        <a href="https://github.com/SuyuZ1/Survery" target="_blank" class="arxiv-button">
+                            <i class="bi bi-github"></i>
+                            GitHub
+                        </a>
+                        <a href="https://arxiv.org/abs/2512.11362" target="_blank" class="arxiv-button">
+                            <img src="css/arxiv-logomark-small@2x.png"
+                                alt="arXiv"
+                                style="height: 26px; margin-right: 13px; vertical-align: middle;">
+                            arXiv
+                        </a>
+
+                        <a href="https://arxiv.org/pdf/2512.11362.pdf" target="_blank" class="arxiv-button">
+                            <i class="bi bi-file-earmark-pdf"></i>
+                            Paper
+                        </a>
+                    </div>
+                </div>
+                
+              <!-- Latest Papers Section -->
+                <div class="latest-section mt-5">
+
+                    <div class="latest-header d-flex align-items-center flex-wrap">
+                        <div>
+                            <h4 class="mb-1">Latest Papers (Weekly Update)</h4>
+                            <div class="latest-meta">
+                                Recently-added or newly-published VLA papers
+                                <span id="latestUpdatedDate">(Updated on: —)</span>
+                            </div>
+                        </div>
+
+                        <div class="ml-auto latest-controls">
+                            <select id="latestRangeSelect" class="form-control form-control-sm">
+                                <option value="1" selected>This week</option>
+                                <option value="2">Last week</option>
+                                <option value="3">2 weeks ago</option>
+                                <option value="4">3 weeks ago</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div id="latestScrollWrapper" class="latest-scroll-wrapper">
+                        <div id="latestScroll" class="latest-scroll"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-12"><hr class="mt-4 mb-4"></div>
+                <!-- Main Figure Section -->
+                <div class="row mt-5">
+                    <div class="col-lg-12">
+                        <h4 class="text-center mb-4" style="font-weight: 600; color: #2c3e50;">Overview</h4>
+                        <div class="timeline-container">
+                            <figure class="timeline-figure text-center">
+                                <img src="imgs/challenges.png?v=1" class="timeline-image" alt="Overview of VLA challenges and structure" onerror="this.src='https://via.placeholder.com/1200x400?text=Challenges+Figure+Placeholder'">
+                                <figcaption class="timeline-caption">Taxonomy of VLA challenges.</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Abstract Section -->
+                <div class="row mt-4">
+                    <div class="col-lg-10 offset-lg-1">
+                        <h4>Abstract</h4>
+                        <p>
+                            Vision-Language-Action (VLA) models are driving a revolution in robotics, enabling machines to understand instructions and interact with the physical world. This field is exploding with new models and datasets, making it both exciting and challenging to keep pace with. This survey offers a clear and structured guide to the VLA landscape. We design it to follow the natural learning path of a researcher: we start with the basic Modules of any VLA model, trace the history through key Milestones, and then dive deep into the core Challenges that define recent research frontier.
+                            Our main contribution is a detailed breakdown of the five biggest challenges about: (1) Representation, (2) Execution, (3) Generalization, (4) Safety, and (5) Dataset and Evaluation. This structure mirrors the developmental roadmap of a generalist agent: establishing the fundamental perception-action loop, scaling capabilities across diverse embodiments and environments, and finally ensuring trustworthy deployment—all supported by the essential data infrastructure. For each of them, we review existing approaches and highlight future opportunities. We position this paper as both a foundational guide for newcomers and a strategic roadmap for experienced researchers, with the dual aim of accelerating learning and inspiring new ideas in embodied intelligence. A live version of this survey, with continuous updates, is maintained in this website.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Figure Section -->
+                <div class="row mt-5">
+                    <div class="col-lg-12">
+                        <h4 class="text-center mb-4" style="font-weight: 600; color: #2c3e50;">Timeline</h4>
+                        <div class="timeline-container">
+                            <figure class="timeline-figure text-center">
+                                <img src="imgs/timeline.png?v=2" class="timeline-image" alt="Timeline of VLA models, datasets, and evaluation benchmarks from 2022 to 2025" onerror="this.src='https://via.placeholder.com/1200x400?text=Timeline+Figure+Placeholder'">
+                                <figcaption class="timeline-caption">VLA models, datasets, and evaluation benchmarks from 2022 to 2025.</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Interactive Table Section -->
+                <div class="col-lg-12"><hr class="mt-4 mb-4"></div>
+                <div class="col-lg-12">
+                    <h4>Interactive Survey Table</h4>
+                    <p>
+                        Explore the curated list of VLA works. Use the filters below to focus on specific challenges,
+                        solution strategies, or evaluation settings. Click on sortable headers to re-order the rows.
+                    </p>
+
+                    <div class="filters mt-4">
+                        <div class="row">
+                            <div class="col-md-3 mb-3">
+                                <label for="searchInput">Search</label>
+                                <input type="text" id="searchInput" class="form-control" placeholder="Search all fields...">
+                            </div>
+
+                            <div class="col-md-2 mb-3">
+                                <label for="challengeFilter">Challenge Tag</label>
+                                <select id="challengeFilter" class="form-control">
+                                    <option value="">All Challenges</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-2 mb-3">
+                                <label for="subChallengeFilter">Sub-Challeng Tag</label>
+                                <select id="subChallengeFilter" class="form-control">
+                                    <option value="">All Sub-Challenges</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-2 mb-3">
+                                <label for="trainingFilter">Training Type</label>
+                                <select id="trainingFilter" class="form-control">
+                                    <option value="">All Types</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-2 mb-3">
+                                <label for="datasetFilter">Dataset</label>
+                                <select id="datasetFilter" class="form-control">
+                                    <option value="">All Datasets</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-2 mb-3">
+                                <label for="evaluationFilter">Evaluation</label>
+                                <select id="evaluationFilter" class="form-control">
+                                    <option value="">All Evaluations</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-1 mb-3">
+                                <label>&nbsp;</label>
+                                <button class="btn btn-danger btn-block" onclick="clearAllFilters()">Clear</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="table-responsive mt-4">
+                        <table id="surveyTable" class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th class="sortable" data-column="0">Abbreviation</th>
+                                    <th class="sortable" data-column="1">Date</th>
+                                    <th>Link</th>
+                                    <th class="sortable" data-column="3">Challenge Tag</th>
+                                    <th class="sortable" data-column="4">Sub-Challeng Tag</th>
+                                    <th class="sortable" data-column="5">How to Solve</th>
+                                    <th class="sortable" data-column="6">Training Type</th>
+                                    <th class="sortable" data-column="7">Dataset</th>
+                                    <th class="sortable" data-column="8">Evaluation</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tableBody">
+                                <tr>
+                                    <td colspan="9" class="text-center loading">Loading CSV data...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="pagination-wrapper mt-4">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="records-info">
+                                    Showing <span id="startRecord">0</span>-<span id="endRecord">0</span> of <span id="totalRecords">0</span> records
+                                </div>
+                            </div>
+                            <div class="col-md-6 text-right">
+                                <div class="pagination-controls">
+                                    <button id="firstPage" class="btn btn-sm btn-outline-primary">⏮</button>
+                                    <button id="prevPage" class="btn btn-sm btn-outline-primary">◀</button>
+                                    <span class="mx-3">Page <span id="currentPage">1</span> of <span id="totalPages">1</span></span>
+                                    <button id="nextPage" class="btn btn-sm btn-outline-primary">▶</button>
+                                    <button id="lastPage" class="btn btn-sm btn-outline-primary">⏭</button>
+                                    <select id="recordsPerPage" class="form-control form-control-sm d-inline-block ml-3" style="width: auto;">
+                                        <option value="10">10 per page</option>
+                                        <option value="25">25 per page</option>
+                                        <option value="50">50 per page</option>
+                                        <option value="100">100 per page</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BibTeX -->
+                <div class="col-lg-10 offset-lg-1"><hr class="mt-5 mb-4"></div>
+                <div class="col-lg-10 offset-lg-1">
+                    <h4 id="bibtex">BibTeX</h4>
+                    <pre>
+                        @article{xu2025anatomyVLA,
+                            title   = {An Anatomy of Vision-Language-Action Models: From Modules to Milestones and Challenges},
+                            author  = {Xu, Chao and Zhang, Suyu and Liu, Yang and Sun, Baigui and Chen, Weihong and Xu, Bo and Liu, Qi and
+                                        Wang, Juncheng and Wang, Shujun and Luo, Shan and Peters, Jan and
+                                        Vasilakos, Athanasios V. and Zafeiriou, Stefanos and Deng, Jiankang},
+                            journal = {arXiv preprint arXiv:2512.11362},
+                            year    = {2025},
+                        }
+                    </pre>
+                </div>
+
+                <div class="col-lg-10 offset-lg-1"><hr class="mt-4 mb-4"></div>
+                <!-- Contact and Note Section -->
+                <div class="col-lg-10 offset-lg-1 mb-5">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h4 id="contact">Contact</h4>
+                            <p>
+                                If you have any questions or suggestions, please feel free to contact us via email at
+                                <a href="mailto:zsy993115095@gmail.com" target="_blank">Email Address</a>.
+                                <br><br><br><br>
+                            </p>
+                            <h4 id="note">Note</h4>
+                            <p>
+                                This website is adapted from the <a href="https://vla-survey.github.io/" target="_blank">Vision-Language-Action Models for Robotics:A Review Towards Real-World Applications Website</a>.
+                            </p>
+                        </div>
+                        <div class="col-lg-6">
+                            <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=kcWR4QO3i1ZOsyDlcAxjAn663uhlwrpJzcKyx6tnCUY&cl=ffffff&w=a"></script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
