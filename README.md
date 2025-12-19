@@ -1,7 +1,7 @@
 # An Anatomy of Vision-Language-Action Models  
 ### From Modules to Milestones and Challenges  
 
-[![Paper](https://img.shields.io/badge/arXiv-2512.11362-b31b1b.svg)](https://arxiv.org/abs/2512.11362) [![Project Page](https://img.shields.io/badge/Project-Website-blue)](https://github.com/SuyuZ1/VLA-Survey-Anatomy)
+[![Paper](https://img.shields.io/badge/arXiv-2512.11362-b31b1b.svg)](https://arxiv.org/abs/2512.11362) [![Project Page](https://img.shields.io/badge/Project-Website-blue)](https://suyuz1.github.io/VLA-Survey-Anatomy/)
 
 This repository accompanies the survey paper:
 
