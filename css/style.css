@@ -435,3 +435,26 @@ pre {
     font-weight: 600;
     margin-bottom: 6px;
 }
+
+/* ===== Contributed / Starred Papers ===== */
+
+.paper-starred {
+    background: linear-gradient(135deg, #fff7e6, #ffffff);
+    border: 1px solid #f6c177;
+}
+
+.paper-starred .latest-title {
+    color: #d35400;
+}
+
+.paper-star-badge {
+    display: inline-block;
+    font-size: 0.72rem;
+    padding: 2px 6px;
+    margin-left: 6px;
+    border-radius: 6px;
+    background: #f6c177;
+    color: #5a3b00;
+    font-weight: 600;
+}
+

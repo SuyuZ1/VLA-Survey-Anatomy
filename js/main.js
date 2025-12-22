@@ -372,8 +372,23 @@ function updateTable() {
         
         // Abbreviation
         const abbreviation = row['略称'] || '';
-        const abbreviationContent = abbreviation ? (searchTerm ? highlightSearchTerm(abbreviation, searchTerm) : abbreviation) : '-';
-        tr.innerHTML += `<td><strong>${abbreviationContent}</strong></td>`;
+        const isStarred = abbreviation.includes("⭐");
+
+        let abbreviationContent = abbreviation
+            ? (searchTerm ? highlightSearchTerm(abbreviation, searchTerm) : abbreviation)
+            : '-';
+
+        if (isStarred) {
+            abbreviationContent += `
+                <span class="paper-star-badge ml-1">Community Pick</span>
+            `;
+        }
+
+        tr.innerHTML += `
+            <td class="${isStarred ? 'paper-starred' : ''}">
+                <strong>${abbreviationContent}</strong>
+            </td>
+        `;
         
         // Year
         const yearValue = row['Year'] || '';
@@ -775,11 +790,17 @@ function applyLatestWeekFilter() {
         return d && d >= targetWeekStart && d <= targetWeekEnd;
     });
 
+    // ⭐ 3.5 投稿论文优先排序（稳定排序）
+    const sorted = [
+        ...filtered.filter(r => (r["略称"] || "").includes("⭐")),
+        ...filtered.filter(r => !(r["略称"] || "").includes("⭐"))
+    ];
+
     // 4. 更新卡片
-    renderLatestCards(filtered);
+    renderLatestCards(sorted);
 
     // 5. 更新 Updated on 文案（该周的最大 Updated Date）
-    updateLatestUpdatedDate(filtered, targetWeekEnd);
+    updateLatestUpdatedDate(sorted, targetWeekEnd);
 }
 
 // Update "Updated on" text for latest cards
@@ -821,8 +842,10 @@ function renderLatestCards(latestData) {
     container.innerHTML = "";
 
     latestData.forEach(row => {
+        const isStarred = (row["略称"] || "").includes("⭐");
+
         const card = document.createElement("div");
-        card.className = "latest-card";
+        card.className = "latest-card" + (isStarred ? " paper-starred" : "");
 
         // ----- challenge tags -----
         const challengeHTML = row.__challengeOrder.length
@@ -889,7 +912,10 @@ function renderLatestCards(latestData) {
         }
 
         card.innerHTML = `
-            <div class="latest-title">${row["略称"]}</div>
+            <div class="latest-title">
+                ${row["略称"]}
+                ${isStarred ? '<span class="paper-star-badge">Community Pick</span>' : ''}
+            </div>
             <div class="latest-subtitle">${row["Title"] || ""}</div>
 
             <div class="latest-section-label mt-2">Date</div>
