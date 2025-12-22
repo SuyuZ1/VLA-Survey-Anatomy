@@ -790,11 +790,12 @@ function applyLatestWeekFilter() {
         return d && d >= targetWeekStart && d <= targetWeekEnd;
     });
 
-    // ⭐ 3.5 投稿论文优先排序（稳定排序）
-    // const filtered = [
-    //     ...filtered.filter(r => (r["略称"] || "").includes("⭐")),
-    //     ...filtered.filter(r => !(r["略称"] || "").includes("⭐"))
-    // ];
+    // Sort by Updated Date (descending) so newest papers are first
+    filtered.sort((a, b) => {
+        const da = parseFlexibleDate(a["Updated Date"]);
+        const db = parseFlexibleDate(b["Updated Date"]);
+        return (db?.getTime() || 0) - (da?.getTime() || 0);
+    });
 
     // 4. 更新卡片
     renderLatestCards(filtered);
