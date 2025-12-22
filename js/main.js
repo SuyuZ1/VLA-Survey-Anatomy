@@ -378,11 +378,11 @@ function updateTable() {
             ? (searchTerm ? highlightSearchTerm(abbreviation, searchTerm) : abbreviation)
             : '-';
 
-        if (isStarred) {
-            abbreviationContent += `
-                <span class="paper-star-badge ml-1">Community Pick</span>
-            `;
-        }
+        // if (isStarred) {
+        //     abbreviationContent += `
+        //         <span class="paper-star-badge ml-1">Community Pick</span>
+        //     `;
+        // }
 
         tr.innerHTML += `
             <td class="${isStarred ? 'paper-starred' : ''}">
@@ -791,16 +791,16 @@ function applyLatestWeekFilter() {
     });
 
     // ⭐ 3.5 投稿论文优先排序（稳定排序）
-    const sorted = [
-        ...filtered.filter(r => (r["略称"] || "").includes("⭐")),
-        ...filtered.filter(r => !(r["略称"] || "").includes("⭐"))
-    ];
+    // const filtered = [
+    //     ...filtered.filter(r => (r["略称"] || "").includes("⭐")),
+    //     ...filtered.filter(r => !(r["略称"] || "").includes("⭐"))
+    // ];
 
     // 4. 更新卡片
-    renderLatestCards(sorted);
+    renderLatestCards(filtered);
 
     // 5. 更新 Updated on 文案（该周的最大 Updated Date）
-    updateLatestUpdatedDate(sorted, targetWeekEnd);
+    updateLatestUpdatedDate(filtered, targetWeekEnd);
 }
 
 // Update "Updated on" text for latest cards
@@ -911,10 +911,41 @@ function renderLatestCards(latestData) {
                 .join(" ");
         }
 
-        card.innerHTML = `
+        // card.innerHTML = `
+        //     <div class="latest-title">
+        //         ${row["略称"]}
+        //         ${isStarred ? '<span class="paper-star-badge">Community Pick</span>' : ''}
+        //     </div>
+        //     <div class="latest-subtitle">${row["Title"] || ""}</div>
+
+        //     <div class="latest-section-label mt-2">Date</div>
+        //     <div>${row["Year"] || "-"}</div>
+
+        //     <div class="latest-section-label">Challenge</div>
+        //     <div>${challengeHTML}</div>
+
+        //     <div class="latest-section-label">Sub-Challenge</div>
+        //     <div>${subHTML}</div>
+
+        //     <div class="latest-section-label">How to Solve</div>
+        //     <div>${solveHTML}</div>
+
+        //     <div class="latest-section-label">Training Type</div>
+        //     <div>${trainingHTML}</div>
+
+        //     <div class="latest-section-label">Dataset</div>
+        //     <div>${datasetHTML}</div>
+
+        //     <div class="latest-section-label">Evaluation</div>
+        //     <div>${evalHTML}</div>
+
+        //     <div class="latest-section-label mt-2">Link</div>
+        //     <div>${linkHTML}</div>
+        // `;
+
+                card.innerHTML = `
             <div class="latest-title">
                 ${row["略称"]}
-                ${isStarred ? '<span class="paper-star-badge">Community Pick</span>' : ''}
             </div>
             <div class="latest-subtitle">${row["Title"] || ""}</div>
 
