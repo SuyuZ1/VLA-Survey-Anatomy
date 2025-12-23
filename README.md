@@ -44,6 +44,7 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 > ⭐Starred papers are submitted by authors who contacted us. We warmly welcome submissions and encourage researchers to share their latest results.
 
 ### 1️⃣ Multi-Modal Alignment and Physical World Modeling  
+
 *(Sec. 4.1)*
 
 <details>
@@ -80,6 +81,37 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 
 <details>
 <summary><strong>4.1.2 From 2D Images to Spatial Temporal Representations</strong></summary>
+
+- **GeoPredict**[2025-12-18]: Constructs a predictive 3D Gaussian geometry module to forecast workspace geometry with track guided refinement along future keypoint trajectories. [[paper](https://arxiv.org/pdf/2512.16811)] [[website](https://jingjingqian75.github.io/GeoPredict-Page/)]
+- **HiF-VLA**[2025-12-10]: Leverage low-dimensional motion vectors for hindsight foresight and action fusion in a unified latent space. [[paper](https://arxiv.org/pdf/2512.09928)] [[website](https://hifvla.github.io)]
+- **Lumo-1**[2025-12-10]: Build a vision language action model with spatial action tokenization and structured reasoning. [[paper](https://arxiv.org/pdf/2512.08580)] [[website](https://www.astribot.com/research/Lumo1)]
+- **GLaD**[2025-12-10]: Distill geometric features from a frozen VGGT teacher into LLM hidden states for visual tokens to fuse 3D priors. [[paper](https://arxiv.org/pdf/2512.09619)] [[website](-)]
+- **VLA-4D**[2025-11-21]: Embed 3D positions and 1D time into visual features and extend actions with temporal variables for coherent manipulation. [[paper](https://arxiv.org/pdf/2511.17199)] [[website](-)]
+- **CronusVLA⭐**[2025-10-30]: Proposes a two-stage framework with single-frame pretraining and multi-frame post-training using feature chunking to aggregate temporal information. [[paper](https://arxiv.org/pdf/2506.19816)] [[website](-)]
+- **WALL-OSS⭐**[2025-09-08]: Leverage embodied VQA and discrete action priors to strengthen spatial reasoning and progress modeling. [[paper](https://arxiv.org/pdf/2509.11766)] [[website](https://x2robot.com/en/research/68bc2cde8497d7f238dde690)]
+- **RoboFlamingo-Plus**[2025]: Fuses preprocessed depth maps  with RGB features. [[paper](https://arxiv.org/pdf/2503.19510)] [[website](-)]
+- **PointVLA**[2025]: integrates point cloud inputs into pretrained VLA models to improve spatial reasoning without modifying the backbone. [[paper](https://arxiv.org/pdf/2503.07511)] [[website](https://pointvla.github.io/)]
+- **GeoVLA**[2025]: unify 2D and 3D modalities. [[paper](https://arxiv.org/pdf/2508.09071)] [[website](https://linsun449.github.io/GeoVLA)]
+- **FP3**[2025]: Uses a point-cloud–centric pipeline reconstruction. [[paper](https://arxiv.org/pdf/2503.08950)] [[website](https://3d-foundation-policy.github.io/)]
+- **SoFar**[2025]: Constructs semantic 3D scene graphs by integrating VLM-recognized objects and point-cloud orientation cues. [[paper](https://arxiv.org/pdf/2502.13143)] [[website](https://qizekun.github.io/sofar/)]
+- **Weakly-Supervised 3D**[2025]: Leverages CLIP’s 2D–text alignment for weakly supervised 3D semantic transfer. [[paper](https://arxiv.org/pdf/2312.09625)] [[website](-)]
+- **LLM-3DP**[2025]: Fuses 2D semantic features via back-projection with point-cloud geometry for unified semantic-geometric representation. [[paper](https://arxiv.org/pdf/2501.18733)] [[website](https://lmm-3dp-release.github.io/)]
+- **ARM4R**[2025]: Learns space–time coupling by predicting the evolution of 3D point trajectories. [[paper](https://arxiv.org/pdf/2502.13142)] [[website](https://arm4r.github.io/)]
+- **SpatialVLA**[2025]: Uses positional encoding and adaptive spatial grids to project 2D semantics into 3D and generate space-action knowledge graphs. [[paper](https://arxiv.org/pdf/2501.15830)] [[website](spatialvla.github.io/)]
+- **Evo-0**[2025]: Attaches external geometric modules atop a frozen VLM. [[paper](https://arxiv.org/pdf/2507.00416)] [[website](https://mint-sjtu.github.io/Evo-0.io/)]
+- **AC-DiT**[2025]: Leverages diffusion-based conditional modeling to estimate depth reliability without full 3D reconstruction. [[paper](https://arxiv.org/pdf/2507.01961)] [[website](https://ac-dit.github.io/)]
+- **BridgeVLA**[2025]: Converts point clouds into multiple rendered 2D views. [[paper](https://arxiv.org/pdf/2506.07961)] [[website](https://bridgevla.github.io/)]
+- **OG-VLA**[2025]: generates orthographic projections to recover 3D pose. [[paper](https://arxiv.org/abs/2506.01196)] [[website](https://og-vla.github.io/)]
+- **Spatial Traces**[2025]: Fuses tracked keypoints with depth maps, encoding structure and dy namics in a unified 2D input. [[paper](https://arxiv.org/pdf/2508.09032)] [[website](https://ampiromax.github.io/ST-VLA)]
+- **A0**[2025]: Predicts interaction points and trajectories in 2D and then lifts them into 3D via depth projection. [[paper](https://arxiv.org/pdf/2504.12636)] [[website](https://a-embodied.github.io/A0/)]
+- **Depth Helps**[2024]: Treats depth as a supervisory signal. [[paper](https://arxiv.org/pdf/2408.05107)] [[website](https://gewu-lab.github.io/DepthHelps-IROS2024/)]
+- **OccLLaMA**[2024]: Assigns semantic labels to 3D  voxels for spatial reasoning. [[paper](https://arxiv.org/pdf/2409.03272)] [[website](https://vilonge.github.io/OccLLaMA_Page/)]
+- **RoboMM**[2024]: Incorporates multi-view temporal modeling to generate unified 3D  occupancy grids. [[paper](https://arxiv.org/pdf/2412.07215)] [[website](-)]
+- **TraceVLA**[2024]: Extends this to a 4D  perspective by incorporating time. [[paper](https://arxiv.org/pdf/2412.10345)] [[website](https://tracevla.github.io/)]
+- **RoboPoint**[2024]: Leverages 2D keypoint back-projection to form structured 3D action cues. [[paper](https://arxiv.org/pdf/2406.10721)] [[website](https://robo-point.github.io/)]
+- **Leo**[2023]: unify 2D and 3D modalities. [[paper](https://arxiv.org/pdf/2311.12871)] [[website](https://embodied-generalist.github.io/)]
+- **VoxPoser**[2023]: Leverages LLM-guided code to generate dense voxel-value maps linking linguistic constraints to spatial geometry. [[paper](https://arxiv.org/pdf/2307.05973)] [[website](https://voxposer.github.io/)]
+
 </details>
 
 <details>
@@ -427,3 +459,4 @@ If you find this repository useful, please cite:
 This is a **living survey**.Contributions, corrections, and new papers are welcome.
 
 Feel free to contact: zsy993115095@gmail.com
+
