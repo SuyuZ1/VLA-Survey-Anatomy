@@ -108,10 +108,10 @@ async function loadCSV() {
         allData = result.data;
         
         // ------ Group rows by Abbreviation (preserve mapping info) ------
-        const grouped = {}; // key: 略称 -> { baseRowFields..., challenges: Set, challengeOrder:[], subMap: Map, solveMap: Map }
+        const grouped = {}; // key: Abbr -> { baseRowFields..., challenges: Set, challengeOrder:[], subMap: Map, solveMap: Map }
 
         allData.forEach(row => {
-            const key = (row['略称'] || '').trim();
+            const key = (row['Abbr'] || '').trim();
             if (!key) return; // skip empty abbrev
 
             // Ensure row exists
@@ -208,7 +208,7 @@ async function loadCSV() {
             const mergedSolve = [...e.solveMap.keys()].join(';');
 
             return {
-                // use stored first-seen fields (like Year, Paper URL, Website URL, 略称)
+                // use stored first-seen fields (like Year, Paper URL, Website URL, Abbr)
                 ...e,
                 'Challenge Tag': mergedChallenge,
                 'Sub-Challeng Tag': mergedSub,
@@ -222,7 +222,7 @@ async function loadCSV() {
 
 
         // Filter out any empty rows that might have been created
-        allData = allData.filter(row => row['略称'] && row['略称'].trim() !== '');
+        allData = allData.filter(row => row['Abbr'] && row['Abbr'].trim() !== '');
         
         allData.sort((a, b) => {
             const da = parseFlexibleDate(a["Year"]);
@@ -371,7 +371,7 @@ function updateTable() {
         };
         
         // Abbreviation
-        const abbreviation = row['略称'] || '';
+        const abbreviation = row['Abbr'] || '';
         const isStarred = abbreviation.includes("⭐");
 
         let abbreviationContent = abbreviation
@@ -479,7 +479,7 @@ function updateTable() {
 // Calculate search score
 function calculateSearchScore(searchTerm, row) {
     const fieldWeights = {
-        '略称': 10,
+        'Abbr': 10,
         'Year': 6,
         'Challenge Tag': 8,
         'Sub-Challeng Tag': 7,
@@ -581,7 +581,7 @@ function sortTable(column) {
     }
     
     const columnMap = {
-        0: '略称',
+        0: 'Abbr',
         1: 'Year',
         3: 'Challenge Tag',
         4: 'Sub-Challeng Tag',
@@ -684,13 +684,13 @@ async function loadLatestCSV() {
             dynamicTyping: true
         });
 
-        let data = result.data.filter(row => row["略称"]?.trim());
+        let data = result.data.filter(row => row["Abbr"]?.trim());
 
         // --- reuse same grouping logic as vla_data.csv ---
         const grouped = {};
 
         data.forEach(row => {
-            const key = (row['略称'] || '').trim();
+            const key = (row['Abbr'] || '').trim();
             if (!key) return;
 
             if (!grouped[key]) {
@@ -792,8 +792,8 @@ function applyLatestWeekFilter() {
 
     // ⭐ 3.5 投稿论文优先排序（稳定排序）
     // const filtered = [
-    //     ...filtered.filter(r => (r["略称"] || "").includes("⭐")),
-    //     ...filtered.filter(r => !(r["略称"] || "").includes("⭐"))
+    //     ...filtered.filter(r => (r["Abbr"] || "").includes("⭐")),
+    //     ...filtered.filter(r => !(r["Abbr"] || "").includes("⭐"))
     // ];
 
     // 4. 更新卡片
@@ -842,7 +842,7 @@ function renderLatestCards(latestData) {
     container.innerHTML = "";
 
     latestData.forEach(row => {
-        const isStarred = (row["略称"] || "").includes("⭐");
+        const isStarred = (row["Abbr"] || "").includes("⭐");
 
         const card = document.createElement("div");
         card.className = "latest-card" + (isStarred ? " paper-starred" : "");
@@ -913,7 +913,7 @@ function renderLatestCards(latestData) {
 
         // card.innerHTML = `
         //     <div class="latest-title">
-        //         ${row["略称"]}
+        //         ${row["Abbr"]}
         //         ${isStarred ? '<span class="paper-star-badge">Community Pick</span>' : ''}
         //     </div>
         //     <div class="latest-subtitle">${row["Title"] || ""}</div>
@@ -945,7 +945,7 @@ function renderLatestCards(latestData) {
 
                 card.innerHTML = `
             <div class="latest-title">
-                ${row["略称"]}
+                ${row["Abbr"]}
             </div>
             <div class="latest-subtitle">${row["Title"] || ""}</div>
 
