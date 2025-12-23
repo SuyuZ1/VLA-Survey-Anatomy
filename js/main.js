@@ -792,8 +792,8 @@ function applyLatestWeekFilter() {
 
     // ⭐ 3.5 投稿论文优先排序（稳定排序）
     // const filtered = [
-    //     ...filtered.filter(r => (r["Abbr"] || "").includes("⭐")),
-    //     ...filtered.filter(r => !(r["Abbr"] || "").includes("⭐"))
+    //     ...filtered.filter(r => (r["略称"] || "").includes("⭐")),
+    //     ...filtered.filter(r => !(r["略称"] || "").includes("⭐"))
     // ];
 
     // 4. 更新卡片
