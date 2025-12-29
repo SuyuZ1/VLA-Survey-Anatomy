@@ -50,7 +50,10 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.1.1 The GAP between Semantics Perception and Physical Interaction</strong></summary>
 
+- **Point-VLA**[2025-12-22]: Augments language instructions with explicit visual cues like bounding boxes to resolve referential ambiguity enabling precise object-level grounding. [[paper](https://arxiv.org/pdf/2512.18933)] [[website](-)]
+- **TwinAligner**[2025-12-22]: Uses SDF reconstruction and editable 3DGS rendering for pixel level alignment while ensuring dynamic consistency by identifying rigid physics. [[paper](https://arxiv.org/pdf/2512.19390)] [[website](https://twin-aligner.github.io)]
 - **PhysBrain**[2025-12-19]: Train an egocentric-aware embodied brain on the E2E-3M dataset to bridge vision language models with physical intelligence and enable sample-efficient VLA fine-tuning. [[paper](https://arxiv.org/pdf/2512.16793)] [[website](https://zgc-embodyai.github.io/PhysBrain/)]
+- **mimic-video**[2025-12-19]: Leverage pretrained video model latents to capture physical dynamics missing from static vision language backbones. [[paper](https://arxiv.org/pdf/2512.15692)] [[website](https://mimic-video.github.io)]
 - **DexGrasp-VLA**[2025-12-13]: Develop an Arm-Hand Feature Enhancement module to explicitly capture distinct latent features of arm and hand movements. [[paper](https://arxiv.org/pdf/2511.00139)] [[website](https://dexvla-seed.github.io/dex-vla)]
 - **InternVLA-M1⭐**[2025-10-15]: Employs a two-stage pipeline combining spatial grounding pre-training with spatially guided action post-training to bridge instructions and actions. [[paper](https://arxiv.org/pdf/2510.13778)] [[website](https://internrobotics.github.io/internvla-m1.github.io/)]
 - **WALL-OSS⭐**[2025-09-08]: Employ a tightly coupled Mixture-of-Experts architecture with static routing to align action and vision-language features. [[paper](https://arxiv.org/pdf/2509.11766)] [[website](https://x2robot.com/en/research/68bc2cde8497d7f238dde690)]
@@ -82,6 +85,7 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.1.2 From 2D Images to Spatial Temporal Representations</strong></summary>
 
+- **Real2Edit2Real**[2025-12-22]: Reconstruct metric scale geometry from RGB observations and use depth as a control interface for video generation. [[paper](https://arxiv.org/pdf/2512.19402)] [[website](https://real2edit2real.github.io/)]
 - **GeoPredict**[2025-12-18]: Constructs a predictive 3D Gaussian geometry module to forecast workspace geometry with track guided refinement along future keypoint trajectories. [[paper](https://arxiv.org/pdf/2512.16811)] [[website](https://jingjingqian75.github.io/GeoPredict-Page/)]
 - **HiF-VLA**[2025-12-10]: Leverage low-dimensional motion vectors for hindsight foresight and action fusion in a unified latent space. [[paper](https://arxiv.org/pdf/2512.09928)] [[website](https://hifvla.github.io)]
 - **Lumo-1**[2025-12-10]: Build a vision language action model with spatial action tokenization and structured reasoning. [[paper](https://arxiv.org/pdf/2512.08580)] [[website](https://www.astribot.com/research/Lumo1)]
@@ -117,10 +121,14 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.1.3 Dynamic and Predictive World Models</strong></summary>
 
+- **mimic-video**[2025-12-19]: Condition a flow matching action decoder on intermediate latent representations from a frozen video backbone. [[paper](https://arxiv.org/pdf/2512.15692)] [[website](https://mimic-video.github.io)]
+- **VLA-Motion**[2025-12-19]: Uses a dual-head design to jointly learn action chunks and optical-flow-based motion images via a shared VLM backbone to enhance motion reasoning. [[paper](https://arxiv.org/pdf/2512.18007)] [[website](https://vla-motion.github.io/)]
 - **GeoPredict**[2025-12-18]: Augments a continuous action policy with predictive kinematic priors that encode motion history and predict multi step 3D keypoint trajectories. [[paper](https://arxiv.org/pdf/2512.16811)] [[website](https://jingjingqian75.github.io/GeoPredict-Page/)]
 - **ISS**[2025-12-17]: Introduces an implicit scene supervision module that predicts future point cloud features to enforce long-term geometric consistency. [[paper](https://arxiv.org/pdf/2512.15020)] [[website](-)]
 - **Motus**[2025-12-15]: Integrates video generation and action experts via Mixture-of-Transformer architecture with a UniDiffuser-style scheduler. [[paper](https://arxiv.org/pdf/2512.13030)] [[website](https://motus-robotics.github.io/motus)]
+- **DexWM**[2025-12-15]: Introduce a latent space world model conditioned on dexterous actions with an auxiliary hand consistency loss to enforce accurate hand configurations. [[paper](https://arxiv.org/pdf/2512.13644)] [[website](https://raktimgg.github.io/dexwm/)]
 - **VL-JEPA**[2025-12-11]: Predict continuous embeddings of target texts in an abstract representation space using a joint embedding predictive architecture. [[paper](https://arxiv.org/pdf/2512.10942)] [[website](-)]
+- **EToT**[2025-12-09]: Leverages a physics-based interactive digital twin as an embodied world model to enforce explicit physical laws and collision constraints during planning. [[paper](https://arxiv.org/pdf/2512.08188)] [[website](https://embodied-tree-of-thoughts.github.io/)]
 - **VideoVLA**[2025-12-07]: Jointly denoise video latents and action vectors within a unified multi-modal diffusion transformer architecture. [[paper](https://arxiv.org/pdf/2512.06963)] [[website](https://videovla-nips2025.github.io/)]
 - **HiMoE-VLA**[2025-12-05]: Train actions with flow matching to model multimodal action distributions. [[paper](https://arxiv.org/pdf/2512.05693)] [[website](https://github.com/ZhiyingDu/HiMoE-VLA)]
 - **GigaWorld-0**[2025-11-30]: Unify video generation and 3D physics-aware reconstruction to synthesize controllable embodied interaction data. [[paper](https://arxiv.org/pdf/2511.19861)] [[website](https://giga-world-0.github.io)]
@@ -162,6 +170,7 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <summary><strong>4.2.2 Hierarchical Planning and Task Decomposition</strong></summary>
 
 - **Lumo-1**[2025-12-10]: Train with staged reasoning action alignment and flow matched action expert for efficient execution. [[paper](https://arxiv.org/pdf/2512.08580)] [[website](https://www.astribot.com/research/Lumo1)]
+- **EToT**[2025-12-09]: Formulates task planning as a tree-structured search process expanded through Priori Branching to generate diverse candidate execution paths based on semantic analysis. [[paper](https://arxiv.org/pdf/2512.08188)] [[website](https://embodied-tree-of-thoughts.github.io/)]
 - **MM-ACT⭐**[2025-12-08]: Integrates text image and action in shared token space to perform task planning and future image prediction under shared context. [[paper](https://arxiv.org/pdf/2512.00975)] [[website](https://github.com/HHYHRHY/MM-ACT)]
 - **ManualVLA**[2025-12-01]: Design a unified Mixture-of-Transformers framework that selectively activates planning and action experts for coherent manual generation and execution. [[paper](https://arxiv.org/pdf/2512.02013)] [[website](https://sites.google.com/view/maunalvla)]
 - **MoE-DP**[2025-11-07]: Integrate a Mixture of Experts layer to decompose long-horizon tasks into specialized skills within the diffusion policy. [[paper](https://arxiv.org/pdf/2511.05007)] [[website](https://moe-dp-website.github.io/MoE-DP-Website/)]
@@ -185,6 +194,7 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.2.3 Error Detection and Autonomous Recovery</strong></summary>
 
+- **EToT**[2025-12-09]: Utilizes Reflective Branching to diagnose execution failures within the simulator and iteratively refine the planning tree with corrective actions. [[paper](https://arxiv.org/pdf/2512.08188)] [[website](https://embodied-tree-of-thoughts.github.io/)]
 - **AFI**[2025-12-08]: Detect memory traps using proprioception and execute affordance-guided rollback for recovery. [[paper](https://arxiv.org/pdf/2512.07472)] [[website](-)]
 - **ViFailback**[2025-12-03]: Use a VLM to detect localize and classify failures then generate textual and visual corrective guidance. [[paper](https://arxiv.org/pdf/2512.02787)] [[website](https://x1nyuzhou.github.io/vifailback.github.io)]
 - **MoE-DP**[2025-11-07]: Leverage dynamic expert routing to detect failures and reactivate appropriate experts for subtask retries. [[paper](https://arxiv.org/pdf/2511.05007)] [[website](https://moe-dp-website.github.io/MoE-DP-Website/)]
@@ -246,6 +256,8 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.3.1 Open-World Generalization</strong></summary>
 
+- **Point-VLA**[2025-12-22]: Applies grounding-aware augmentations to decouple grounding from absolute coordinates reducing overfitting and adapting to varying visual perception. [[paper](https://arxiv.org/pdf/2512.18933)] [[website](-)]
+- **Real2Edit2Real**[2025-12-22]: Synthesize spatially diverse demonstrations by bridging 3D editability with 2D visual data via a 3D control interface. [[paper](https://arxiv.org/pdf/2512.19402)] [[website](https://real2edit2real.github.io/)]
 - **Human to Robot**[2025-12-16]: Co-train human videos as an additional embodiment with robot data using unified trajectory and sub-task prediction objectives. [[paper](https://www.physicalintelligence.company/download/human_to_robot.pdf)] [[website](https://www.physicalintelligence.company/research/human_to_robot)]
 - **OXE-AugE**[2025-12-15]: Fine-tunes generalist policies on augmented data to improve zero-shot transfer to unseen embodiments. [[paper](https://arxiv.org/pdf/2512.13100)] [[website](https://OXE-AugE.github.io/)]
 - **WholeBodyVLA**[2025-12-15]: Train separate locomotion and manipulation latent action models on human videos to supervise VLA training. [[paper](https://arxiv.org/pdf/2512.11047)] [[website](https://opendrivelab.com/WholeBodyVLA)]
@@ -301,7 +313,9 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.3.3 Sim-to-Real Gap in Deployment</strong></summary>
 
+- **TwinAligner**[2025-12-22]: Enables policies trained in simulation to achieve strong zero shot generalization to the real world by addressing both visual and dynamic gaps. [[paper](https://arxiv.org/pdf/2512.19390)] [[website](https://twin-aligner.github.io)]
 - **MiVLA**[2025-12-17]: Utilizes kinematic rules with left/right hand coordinate systems for bidirectional alignment between human and robot action spaces. [[paper](https://arxiv.org/pdf/2512.15411)] [[website](-)]
+- **DexWM**[2025-12-15]: Pre-train on human and robot datasets followed by fine-tuning on exploratory simulation data to enable zero-shot transfer to real robots. [[paper](https://arxiv.org/pdf/2512.13644)] [[website](https://raktimgg.github.io/dexwm/)]
 - **RoboWheel**[2025-12-02]: Uses a simulation-augmented data flywheel with domain randomization in Isaac Sim to enrich trajectory distributions for robust real-world transfer. [[paper](https://arxiv.org/pdf/2512.02729)] [[website](https://zhangyuhong01.github.io/Robowheel)]
 - **DiG-Flow**[2025-12-1]: Compute a distributional discrepancy between observation and action embeddings to guide residual feature updates for robust flow matching. [[paper](https://arxiv.org/pdf/2512.01715)] [[website](https://beingbeyond.github.io/DiG-Flow)]
 - **ManualVLA**[2025-12-01]: Construct a high-fidelity digital twin toolkit using 3D Gaussian Splatting to synthesize large-scale training data. [[paper](https://arxiv.org/pdf/2512.02013)] [[website](https://sites.google.com/view/maunalvla)]
