@@ -50,6 +50,7 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.1.1 The GAP between Semantics Perception and Physical Interaction</strong></summary>
 
+- **DreamTacVLA**[2025-12-29]: Utilize Hierarchical Spatial Alignment loss to fuse multi-scale sensory streams and employ a tactile world model to predict future contact dynamics. [[paper](https://arxiv.org/pdf/2512.23864)] [[website](-)]
 - **Point-VLA**[2025-12-22]: Augments language instructions with explicit visual cues like bounding boxes to resolve referential ambiguity enabling precise object-level grounding. [[paper](https://arxiv.org/pdf/2512.18933)] [[website](-)]
 - **TwinAligner**[2025-12-22]: Uses SDF reconstruction and editable 3DGS rendering for pixel level alignment while ensuring dynamic consistency by identifying rigid physics. [[paper](https://arxiv.org/pdf/2512.19390)] [[website](https://twin-aligner.github.io)]
 - **PhysBrain**[2025-12-19]: Train an egocentric-aware embodied brain on the E2E-3M dataset to bridge vision language models with physical intelligence and enable sample-efficient VLA fine-tuning. [[paper](https://arxiv.org/pdf/2512.16793)] [[website](https://zgc-embodyai.github.io/PhysBrain/)]
@@ -121,6 +122,7 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.1.3 Dynamic and Predictive World Models</strong></summary>
 
+- **SurgWorld**[2025-12-30]: Train a diffusion-based world model capable of generating photorealistic task-consistent surgical scenes using curated SATA dataset. [[paper](https://arxiv.org/pdf/2512.23162)] [[website](-)]
 - **mimic-video**[2025-12-19]: Condition a flow matching action decoder on intermediate latent representations from a frozen video backbone. [[paper](https://arxiv.org/pdf/2512.15692)] [[website](https://mimic-video.github.io)]
 - **VLA-Motion**[2025-12-19]: Uses a dual-head design to jointly learn action chunks and optical-flow-based motion images via a shared VLM backbone to enhance motion reasoning. [[paper](https://arxiv.org/pdf/2512.18007)] [[website](https://vla-motion.github.io/)]
 - **GeoPredict**[2025-12-18]: Augments a continuous action policy with predictive kinematic priors that encode motion history and predict multi step 3D keypoint trajectories. [[paper](https://arxiv.org/pdf/2512.16811)] [[website](https://jingjingqian75.github.io/GeoPredict-Page/)]
@@ -169,6 +171,7 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.2.2 Hierarchical Planning and Task Decomposition</strong></summary>
 
+- **RoboMIND**[2025-12-31]: Propose a hierarchical dual-system framework MIND-2 that integrates a high-level semantic planner with a low-level Vision-Language-Action executor optimized via offline reinforcement learning. [[paper](https://arxiv.org/pdf/2512.24653)] [[website](https://modelscope.cn/organization/X-Humanoid?tab=dataset)]
 - **Lumo-1**[2025-12-10]: Train with staged reasoning action alignment and flow matched action expert for efficient execution. [[paper](https://arxiv.org/pdf/2512.08580)] [[website](https://www.astribot.com/research/Lumo1)]
 - **EToT**[2025-12-09]: Formulates task planning as a tree-structured search process expanded through Priori Branching to generate diverse candidate execution paths based on semantic analysis. [[paper](https://arxiv.org/pdf/2512.08188)] [[website](https://embodied-tree-of-thoughts.github.io/)]
 - **MM-ACT⭐**[2025-12-08]: Integrates text image and action in shared token space to perform task planning and future image prediction under shared context. [[paper](https://arxiv.org/pdf/2512.00975)] [[website](https://github.com/HHYHRHY/MM-ACT)]
@@ -194,6 +197,7 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.2.3 Error Detection and Autonomous Recovery</strong></summary>
 
+- **CF-VLA**[2025-12-30]: Utilize a rollout-filter-label pipeline to mine failure cases and train the model for self-correction. [[paper](https://arxiv.org/pdf/2512.24426)] [[website](-)]
 - **EToT**[2025-12-09]: Utilizes Reflective Branching to diagnose execution failures within the simulator and iteratively refine the planning tree with corrective actions. [[paper](https://arxiv.org/pdf/2512.08188)] [[website](https://embodied-tree-of-thoughts.github.io/)]
 - **AFI**[2025-12-08]: Detect memory traps using proprioception and execute affordance-guided rollback for recovery. [[paper](https://arxiv.org/pdf/2512.07472)] [[website](-)]
 - **ViFailback**[2025-12-03]: Use a VLM to detect localize and classify failures then generate textual and visual corrective guidance. [[paper](https://arxiv.org/pdf/2512.02787)] [[website](https://x1nyuzhou.github.io/vifailback.github.io)]
@@ -210,6 +214,7 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.2.4 Real-Time Execution and Computing Efficiency</strong></summary>
 
+- **VLA-RAIL**[2025-12-31]: Propose a client-server asynchronous framework with intra-chunk smoothing and inter-chunk fusion to decouple inference from control and ensure smooth continuous motion. [[paper](https://arxiv.org/pdf/2512.24673)] [[website](-)]
 - **ISS**[2025-12-17]: Uses a streamlined DiT architecture with sparse point cloud encoding to improve inference speed and training efficiency. [[paper](https://arxiv.org/pdf/2512.15020)] [[website](-)]
 - **WholeBodyVLA**[2025-12-15]: Employ a discrete command interface with two-stage curriculum RL policy for precise execution. [[paper](https://arxiv.org/pdf/2512.11047)] [[website](https://opendrivelab.com/WholeBodyVLA)]
 - **VL-JEPA**[2025-12-11]: Enable selective decoding by invoking the text decoder only when significant semantic changes are detected in the predicted embedding stream. [[paper](https://arxiv.org/pdf/2512.10942)] [[website](-)]
@@ -356,6 +361,7 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.4.1 Reliability and Safety Assurance</strong></summary>
 
+- **CF-VLA**[2025-12-30]: Condition counterfactual reasoning on meta-actions to simulate outcomes and revise unsafe plans before execution. [[paper](https://arxiv.org/pdf/2512.24426)] [[website](-)]
 - **VLSA-AEGIS**[2025-12-09]: Introduce a plug-and-play safety constraint layer formulated via control barrier functions into VLA models. [[paper](https://arxiv.org/pdf/2512.11891)] [[website](https://vlsa-aegis.github.io/)]
 - **AutoRT**[2025]: Leverages structured prompting to encode multi level constraints. [[paper](https://arxiv.org/pdf/2401.12963)] [[website](https://auto-rt.github.io/)]
 - **SafeVLA**[2025]: Leverages a cost function in a constrained MDP to model physically hazardous behaviors. [[paper](https://arxiv.org/pdf/2503.03480)] [[website](https://pku-safevla.github.io/)]
@@ -391,6 +397,9 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.5.1 Multi-Source Heterogeneous Data</strong></summary>
 
+- **RoboMIND**[2025-12-31]: Construct a large-scale bimanual mobile manipulation dataset comprising over 300K trajectories collected from six heterogeneous robot embodiments with tactile sensing and digital twins. [[paper](https://arxiv.org/pdf/2512.24653)] [[website](https://modelscope.cn/organization/X-Humanoid?tab=dataset)]
+- **SurgWorld**[2025-12-30]: Curate SATA dataset with expert-labeled surgical video clips covering core surgery actions with detailed spatial interaction. [[paper](https://arxiv.org/pdf/2512.23162)] [[website](-)]
+- **DreamTacVLA**[2025-12-29]: Construct a hybrid large-scale dataset sourced from both high-fidelity digital twin and real-world experiments to mitigate tactile data scarcity. [[paper](https://arxiv.org/pdf/2512.23864)] [[website](-)]
 - **PhysBrain**[2025-12-19]: Transform first-person videos into multi-level schema-driven VQA supervision with enforced evidence grounding and temporal consistency to construct the E2E-3M dataset. [[paper](https://arxiv.org/pdf/2512.16793)] [[website](https://zgc-embodyai.github.io/PhysBrain/)]
 - **Motus**[2025-12-15]: Introduces latent actions derived from optical flow to unify large-scale heterogeneous data across embodiments. [[paper](https://arxiv.org/pdf/2512.13030)] [[website](https://motus-robotics.github.io/motus)]
 - **OXE-AugE**[2025-12-15]: Augments existing datasets with diverse robot embodiments using a scalable pipeline combining simulation rendering and learned masks. [[paper](https://arxiv.org/pdf/2512.13100)] [[website](https://OXE-AugE.github.io/)]
