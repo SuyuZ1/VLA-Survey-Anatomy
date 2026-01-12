@@ -50,6 +50,7 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.1.1 The GAP between Semantics Perception and Physical Interaction</strong></summary>
 
+- **CLAP**[2026-01-07]: Aligns visual latent space from videos with executable robot action space using contrastive learning. [[paper](https://arxiv.org/pdf/2601.04061)] [[website](https://lin-shan.com/CLAP/)]
 - **DreamTacVLA**[2025-12-29]: Utilize Hierarchical Spatial Alignment loss to fuse multi-scale sensory streams and employ a tactile world model to predict future contact dynamics. [[paper](https://arxiv.org/pdf/2512.23864)] [[website](-)]
 - **Point-VLA**[2025-12-22]: Augments language instructions with explicit visual cues like bounding boxes to resolve referential ambiguity enabling precise object-level grounding. [[paper](https://arxiv.org/pdf/2512.18933)] [[website](-)]
 - **TwinAligner**[2025-12-22]: Uses SDF reconstruction and editable 3DGS rendering for pixel level alignment while ensuring dynamic consistency by identifying rigid physics. [[paper](https://arxiv.org/pdf/2512.19390)] [[website](https://twin-aligner.github.io)]
@@ -122,6 +123,8 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.1.3 Dynamic and Predictive World Models</strong></summary>
 
+- **LaST0**[2026-01-08]: Construct a latent spatio-temporal CoT space modeling future visual dynamics 3D structural information and robot proprioceptive states. [[paper](https://arxiv.org/pdf/2601.05248)] [[website](https://sites.google.com/view/last0)]
+- **InternVLA-A1**[2026-01-05]: Integrates understanding generation and action experts into a unified model to synergize semantic reasoning with dynamics prediction. [[paper](https://arxiv.org/pdf/2601.02456)] [[website](-)]
 - **SurgWorld**[2025-12-30]: Train a diffusion-based world model capable of generating photorealistic task-consistent surgical scenes using curated SATA dataset. [[paper](https://arxiv.org/pdf/2512.23162)] [[website](-)]
 - **mimic-video**[2025-12-19]: Condition a flow matching action decoder on intermediate latent representations from a frozen video backbone. [[paper](https://arxiv.org/pdf/2512.15692)] [[website](https://mimic-video.github.io)]
 - **VLA-Motion**[2025-12-19]: Uses a dual-head design to jointly learn action chunks and optical-flow-based motion images via a shared VLM backbone to enhance motion reasoning. [[paper](https://arxiv.org/pdf/2512.18007)] [[website](https://vla-motion.github.io/)]
@@ -214,6 +217,7 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.2.4 Real-Time Execution and Computing Efficiency</strong></summary>
 
+- **LaST0**[2026-01-08]: Adopt a dual-system architecture with a reasoning expert for low-frequency inference and an acting expert for high-frequency actions. [[paper](https://arxiv.org/pdf/2601.05248)] [[website](https://sites.google.com/view/last0)]
 - **VLA-RAIL**[2025-12-31]: Propose a client-server asynchronous framework with intra-chunk smoothing and inter-chunk fusion to decouple inference from control and ensure smooth continuous motion. [[paper](https://arxiv.org/pdf/2512.24673)] [[website](-)]
 - **ISS**[2025-12-17]: Uses a streamlined DiT architecture with sparse point cloud encoding to improve inference speed and training efficiency. [[paper](https://arxiv.org/pdf/2512.15020)] [[website](-)]
 - **WholeBodyVLA**[2025-12-15]: Employ a discrete command interface with two-stage curriculum RL policy for precise execution. [[paper](https://arxiv.org/pdf/2512.11047)] [[website](https://opendrivelab.com/WholeBodyVLA)]
@@ -261,6 +265,7 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.3.1 Open-World Generalization</strong></summary>
 
+- **CLAP**[2026-01-07]: Leverages large scale human demonstrations to learn a shared executable latent space enabling zero shot transfer to novel objects. [[paper](https://arxiv.org/pdf/2601.04061)] [[website](https://lin-shan.com/CLAP/)]
 - **Point-VLA**[2025-12-22]: Applies grounding-aware augmentations to decouple grounding from absolute coordinates reducing overfitting and adapting to varying visual perception. [[paper](https://arxiv.org/pdf/2512.18933)] [[website](-)]
 - **Real2Edit2Real**[2025-12-22]: Synthesize spatially diverse demonstrations by bridging 3D editability with 2D visual data via a 3D control interface. [[paper](https://arxiv.org/pdf/2512.19402)] [[website](https://real2edit2real.github.io/)]
 - **Human to Robot**[2025-12-16]: Co-train human videos as an additional embodiment with robot data using unified trajectory and sub-task prediction objectives. [[paper](https://www.physicalintelligence.company/download/human_to_robot.pdf)] [[website](https://www.physicalintelligence.company/research/human_to_robot)]
@@ -318,6 +323,7 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.3.3 Sim-to-Real Gap in Deployment</strong></summary>
 
+- **InternVLA-A1**[2026-01-05]: Utilizes a hybrid training strategy with synthetic and real datasets to harness simulation diversity while minimizing the sim-to-real gap. [[paper](https://arxiv.org/pdf/2601.02456)] [[website](-)]
 - **TwinAligner**[2025-12-22]: Enables policies trained in simulation to achieve strong zero shot generalization to the real world by addressing both visual and dynamic gaps. [[paper](https://arxiv.org/pdf/2512.19390)] [[website](https://twin-aligner.github.io)]
 - **MiVLA**[2025-12-17]: Utilizes kinematic rules with left/right hand coordinate systems for bidirectional alignment between human and robot action spaces. [[paper](https://arxiv.org/pdf/2512.15411)] [[website](-)]
 - **DexWM**[2025-12-15]: Pre-train on human and robot datasets followed by fine-tuning on exploratory simulation data to enable zero-shot transfer to real robots. [[paper](https://arxiv.org/pdf/2512.13644)] [[website](https://raktimgg.github.io/dexwm/)]
@@ -335,6 +341,8 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.3.4 Online Interaction and Reinforcement Learning</strong></summary>
 
+- **Alpamayo-R1**[2026-01-08]: Adopts a multi-stage training strategy utilizing supervised fine-tuning and reinforcement learning to optimize reasoning quality and consistency. [[paper](https://arxiv.org/pdf/2511.00088)] [[website](https://github.com/NVlabs/alpamayo)]
+- **SOP**[2026-01-06]: SOP couples execution and learning via a closed-loop architecture where a robot fleet streams on-policy experience to a centralized cloud learner for asynchronous policy updates. [[paper](https://arxiv.org/pdf/2601.03044)] [[website](https://www.agibot.com/research/sop)]
 - **EVOLVE-VLA**[2025-12-16]: Introduce accumulative progress estimation mechanism and progressive horizon extension strategy to tame noisy reward signals for test-time training. [[paper](https://arxiv.org/pdf/2512.14666)] [[website](https://showlab.github.io/EVOLVE-VLA)]
 - **Lumo-1**[2025-12-10]: Leverage cross embodiment co training and RL to improve generalization. [[paper](https://arxiv.org/pdf/2512.08580)] [[website](https://www.astribot.com/research/Lumo1)]
 - **ProphRL**[2025-11-25]: Pretrain a unified action-conditioned world model (Prophet) on diverse robot data. [[paper](https://arxiv.org/pdf/2511.20633)] [[website](https://LogosRoboticsGroup.github.io/ProphRL)]
@@ -374,6 +382,7 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.4.2 Interpretability and Trustworthy Interaction</strong></summary>
 
+- **Alpamayo-R1**[2026-01-08]: Integrates Chain of Causation reasoning with trajectory planning to produce decision-grounded causally linked reasoning traces aligned with driving behaviors. [[paper](https://arxiv.org/pdf/2511.00088)] [[website](https://github.com/NVlabs/alpamayo)]
 - **Lumo-1**[2025-12-10]: Provide explicit reasoning traces for transparent decisions. [[paper](https://arxiv.org/pdf/2512.08580)] [[website](https://www.astribot.com/research/Lumo1)]
 - **ViFailback**[2025-12-03]: Use explicit on-frame visual symbols to provide interpretable corrective cues. [[paper](https://arxiv.org/pdf/2512.02787)] [[website](https://x1nyuzhou.github.io/vifailback.github.io)]
 - **MoE-DP**[2025-11-07]: Apply auxiliary load balancing and entropy losses to enforce distinct mappings between experts and semantic task phases. [[paper](https://arxiv.org/pdf/2511.05007)] [[website](https://moe-dp-website.github.io/MoE-DP-Website/)]
@@ -397,6 +406,7 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.5.1 Multi-Source Heterogeneous Data</strong></summary>
 
+- **Alpamayo-R1**[2026-01-08]: Develops a structured Chain of Causation labeling framework utilizing a hybrid human-in-the-loop and auto-labeling pipeline. [[paper](https://arxiv.org/pdf/2511.00088)] [[website](https://github.com/NVlabs/alpamayo)]
 - **RoboMIND**[2025-12-31]: Construct a large-scale bimanual mobile manipulation dataset comprising over 300K trajectories collected from six heterogeneous robot embodiments with tactile sensing and digital twins. [[paper](https://arxiv.org/pdf/2512.24653)] [[website](https://modelscope.cn/organization/X-Humanoid?tab=dataset)]
 - **SurgWorld**[2025-12-30]: Curate SATA dataset with expert-labeled surgical video clips covering core surgery actions with detailed spatial interaction. [[paper](https://arxiv.org/pdf/2512.23162)] [[website](-)]
 - **DreamTacVLA**[2025-12-29]: Construct a hybrid large-scale dataset sourced from both high-fidelity digital twin and real-world experiments to mitigate tactile data scarcity. [[paper](https://arxiv.org/pdf/2512.23864)] [[website](-)]
@@ -440,6 +450,7 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.5.2 Evaluation and Benchmark</strong></summary>
 
+- **Diversity**[2026-01-06]: Perform a systematic dataset audit of widely used VLA corpora to characterize instruction language diversity using lexical semantic and structural metrics. [[paper](https://arxiv.org/pdf/2601.03136)] [[website](-)]
 - **PolaRiS**[2025-12-18]: Utilizes neural reconstruction methods to turn video scans into interactive simulation environments and develops a co-training recipe to bridge real-to-sim gaps. [[paper](https://arxiv.org/pdf/2512.16881)] [[website](https://polaris-evals.github.io)]
 - **VLSA-AEGIS**[2025-12-09]: Construct a comprehensive safety-critical benchmark SafeLIBERO spanning distinct manipulation scenarios with varying complexities. [[paper](https://arxiv.org/pdf/2512.11891)] [[website](https://vlsa-aegis.github.io/)]
 - **ViFailback**[2025-12-03]: Build a large real-world failure VQA dataset and benchmark for diagnosis and correction. [[paper](https://arxiv.org/pdf/2512.02787)] [[website](https://x1nyuzhou.github.io/vifailback.github.io)]
