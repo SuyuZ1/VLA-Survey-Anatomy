@@ -87,6 +87,7 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.1.2 From 2D Images to Spatial Temporal Representations</strong></summary>
 
+- **ActiveVLA**[2026-01-13]: Projects 3D inputs onto multi-view 2D representations to identify critical regions and uses active view selection with 3D zoom-in for precise manipulation. [[paper](https://arxiv.org/pdf/2601.08325)] [[website](https://ZhenyangLiu.github.io/ActiveVLA)]
 - **Real2Edit2Real**[2025-12-22]: Reconstruct metric scale geometry from RGB observations and use depth as a control interface for video generation. [[paper](https://arxiv.org/pdf/2512.19402)] [[website](https://real2edit2real.github.io/)]
 - **GeoPredict**[2025-12-18]: Constructs a predictive 3D Gaussian geometry module to forecast workspace geometry with track guided refinement along future keypoint trajectories. [[paper](https://arxiv.org/pdf/2512.16811)] [[website](https://jingjingqian75.github.io/GeoPredict-Page/)]
 - **HiF-VLA**[2025-12-10]: Leverage low-dimensional motion vectors for hindsight foresight and action fusion in a unified latent space. [[paper](https://arxiv.org/pdf/2512.09928)] [[website](https://hifvla.github.io)]
@@ -174,6 +175,7 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.2.2 Hierarchical Planning and Task Decomposition</strong></summary>
 
+- **VLingNav**[2026-01-13]: Introduces an adaptive chain-of-thought mechanism dynamically triggering explicit reasoning only when necessary. [[paper](https://arxiv.org/pdf/2601.08665)] [[website](https://wsakobe.github.io/VLingNav-web/)]
 - **RoboMIND**[2025-12-31]: Propose a hierarchical dual-system framework MIND-2 that integrates a high-level semantic planner with a low-level Vision-Language-Action executor optimized via offline reinforcement learning. [[paper](https://arxiv.org/pdf/2512.24653)] [[website](https://modelscope.cn/organization/X-Humanoid?tab=dataset)]
 - **Lumo-1**[2025-12-10]: Train with staged reasoning action alignment and flow matched action expert for efficient execution. [[paper](https://arxiv.org/pdf/2512.08580)] [[website](https://www.astribot.com/research/Lumo1)]
 - **EToT**[2025-12-09]: Formulates task planning as a tree-structured search process expanded through Priori Branching to generate diverse candidate execution paths based on semantic analysis. [[paper](https://arxiv.org/pdf/2512.08188)] [[website](https://embodied-tree-of-thoughts.github.io/)]
@@ -200,6 +202,7 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.2.3 Error Detection and Autonomous Recovery</strong></summary>
 
+- **Fast-ThinkAct**[2026-01-15]: Employ a verbalizer to decode latent representations into natural language for interpretable and grounded reasoning. [[paper](https://arxiv.org/pdf/2601.09708)] [[website](-)]
 - **CF-VLA**[2025-12-30]: Utilize a rollout-filter-label pipeline to mine failure cases and train the model for self-correction. [[paper](https://arxiv.org/pdf/2512.24426)] [[website](-)]
 - **EToT**[2025-12-09]: Utilizes Reflective Branching to diagnose execution failures within the simulator and iteratively refine the planning tree with corrective actions. [[paper](https://arxiv.org/pdf/2512.08188)] [[website](https://embodied-tree-of-thoughts.github.io/)]
 - **AFI**[2025-12-08]: Detect memory traps using proprioception and execute affordance-guided rollback for recovery. [[paper](https://arxiv.org/pdf/2512.07472)] [[website](-)]
@@ -217,6 +220,7 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.2.4 Real-Time Execution and Computing Efficiency</strong></summary>
 
+- **Fast-ThinkAct**[2026-01-15]: Compress reasoning into compact verbalizable latent tokens via preference-guided distillation and visual trajectory alignment to enable real-time inference and failure recovery. [[paper](https://arxiv.org/pdf/2601.09708)] [[website](-)]
 - **LaST0**[2026-01-08]: Adopt a dual-system architecture with a reasoning expert for low-frequency inference and an acting expert for high-frequency actions. [[paper](https://arxiv.org/pdf/2601.05248)] [[website](https://sites.google.com/view/last0)]
 - **VLA-RAIL**[2025-12-31]: Propose a client-server asynchronous framework with intra-chunk smoothing and inter-chunk fusion to decouple inference from control and ensure smooth continuous motion. [[paper](https://arxiv.org/pdf/2512.24673)] [[website](-)]
 - **ISS**[2025-12-17]: Uses a streamlined DiT architecture with sparse point cloud encoding to improve inference speed and training efficiency. [[paper](https://arxiv.org/pdf/2512.15020)] [[website](-)]
@@ -311,6 +315,7 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.3.2 Continual Learning and Incremental Skill Acquisition</strong></summary>
 
+- **CLARE**[2026-01-14]: Utilizes lightweight modular adapters with an autonomous autoencoder-based routing mechanism to dynamically expand the model without requiring task identifiers. [[paper](https://arxiv.org/pdf/2601.09512)] [[website](https://tum-lsy.github.io/clare)]
 - **DexGrasp-VLA**[2025-12-13]: Implement a Corrective Human-in-the-loop Teleoperation system to enable continuous policy improvement via failure recovery. [[paper](https://arxiv.org/pdf/2511.00139)] [[website](https://dexvla-seed.github.io/dex-vla)]
 - **Think Small Act Big**[2025]: Leverages new prompts or codebook entries to add skills without modifying existing components. [[paper](https://arxiv.org/pdf/2504.00420)] [[website](-)]
 - **SPECI**[2025]: Leverages new prompts or codebook entries to add skills without modifying existing components. [[paper](https://arxiv.org/pdf/2504.15561)] [[website](-)]
@@ -341,6 +346,8 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.3.4 Online Interaction and Reinforcement Learning</strong></summary>
 
+- **VLingNav**[2026-01-13]: Incorporates an online expert-guided reinforcement learning stage to acquire more robust self-explored navigation behaviors. [[paper](https://arxiv.org/pdf/2601.08665)] [[website](https://wsakobe.github.io/VLingNav-web/)]
+- **TT-VLA**[2026-01-11]: Formulates a dense reward mechanism leveraging step-by-step task-progress signals to refine action policies during test time via value-free PPO. [[paper](https://arxiv.org/pdf/2601.06748)] [[website](-)]
 - **Alpamayo-R1**[2026-01-08]: Adopts a multi-stage training strategy utilizing supervised fine-tuning and reinforcement learning to optimize reasoning quality and consistency. [[paper](https://arxiv.org/pdf/2511.00088)] [[website](https://github.com/NVlabs/alpamayo)]
 - **SOP**[2026-01-06]: SOP couples execution and learning via a closed-loop architecture where a robot fleet streams on-policy experience to a centralized cloud learner for asynchronous policy updates. [[paper](https://arxiv.org/pdf/2601.03044)] [[website](https://www.agibot.com/research/sop)]
 - **EVOLVE-VLA**[2025-12-16]: Introduce accumulative progress estimation mechanism and progressive horizon extension strategy to tame noisy reward signals for test-time training. [[paper](https://arxiv.org/pdf/2512.14666)] [[website](https://showlab.github.io/EVOLVE-VLA)]
@@ -406,6 +413,7 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.5.1 Multi-Source Heterogeneous Data</strong></summary>
 
+- **VLingNav**[2026-01-13]: Constructs the largest embodied navigation dataset enriched with adaptive chain-of-thought annotations. [[paper](https://arxiv.org/pdf/2601.08665)] [[website](https://wsakobe.github.io/VLingNav-web/)]
 - **Alpamayo-R1**[2026-01-08]: Develops a structured Chain of Causation labeling framework utilizing a hybrid human-in-the-loop and auto-labeling pipeline. [[paper](https://arxiv.org/pdf/2511.00088)] [[website](https://github.com/NVlabs/alpamayo)]
 - **RoboMIND**[2025-12-31]: Construct a large-scale bimanual mobile manipulation dataset comprising over 300K trajectories collected from six heterogeneous robot embodiments with tactile sensing and digital twins. [[paper](https://arxiv.org/pdf/2512.24653)] [[website](https://modelscope.cn/organization/X-Humanoid?tab=dataset)]
 - **SurgWorld**[2025-12-30]: Curate SATA dataset with expert-labeled surgical video clips covering core surgery actions with detailed spatial interaction. [[paper](https://arxiv.org/pdf/2512.23162)] [[website](-)]
