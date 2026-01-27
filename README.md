@@ -50,6 +50,7 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.1.1 The GAP between Semantics Perception and Physical Interaction</strong></summary>
 
+- **TwinBrainVLA**[2026-01-20]: Synergizes a frozen generalist VLM with a trainable specialist VLM via Asymmetric Mixture-of-Transformers. [[paper](https://arxiv.org/pdf/2601.14133)] [[website](https://github.com/ZGC-EmbodyAI/TwinBrainVLA)]
 - **CLAP**[2026-01-07]: Aligns visual latent space from videos with executable robot action space using contrastive learning. [[paper](https://arxiv.org/pdf/2601.04061)] [[website](https://lin-shan.com/CLAP/)]
 - **DreamTacVLA**[2025-12-29]: Utilize Hierarchical Spatial Alignment loss to fuse multi-scale sensory streams and employ a tactile world model to predict future contact dynamics. [[paper](https://arxiv.org/pdf/2512.23864)] [[website](-)]
 - **Point-VLA**[2025-12-22]: Augments language instructions with explicit visual cues like bounding boxes to resolve referential ambiguity enabling precise object-level grounding. [[paper](https://arxiv.org/pdf/2512.18933)] [[website](-)]
@@ -87,6 +88,7 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.1.2 From 2D Images to Spatial Temporal Representations</strong></summary>
 
+- **IVRA**[2026-01-22]: Inject affinity hints from the frozen vision encoder into language model layers to restore spatial structure without retraining. [[paper](https://arxiv.org/pdf/2601.16207)] [[website](https://jongwoopark7978.github.io/IVRA)]
 - **ActiveVLA**[2026-01-13]: Projects 3D inputs onto multi-view 2D representations to identify critical regions and uses active view selection with 3D zoom-in for precise manipulation. [[paper](https://arxiv.org/pdf/2601.08325)] [[website](https://ZhenyangLiu.github.io/ActiveVLA)]
 - **Real2Edit2Real**[2025-12-22]: Reconstruct metric scale geometry from RGB observations and use depth as a control interface for video generation. [[paper](https://arxiv.org/pdf/2512.19402)] [[website](https://real2edit2real.github.io/)]
 - **GeoPredict**[2025-12-18]: Constructs a predictive 3D Gaussian geometry module to forecast workspace geometry with track guided refinement along future keypoint trajectories. [[paper](https://arxiv.org/pdf/2512.16811)] [[website](https://jingjingqian75.github.io/GeoPredict-Page/)]
@@ -175,6 +177,7 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.2.2 Hierarchical Planning and Task Decomposition</strong></summary>
 
+- **NeuroVLA**[2026-01-21]: Decomposes control into cortical semantic planning and cerebellar adaptive modulation to separate high-level reasoning from low-level execution. [[paper](https://arxiv.org/pdf/2601.14628)] [[website](-)]
 - **VLingNav**[2026-01-13]: Introduces an adaptive chain-of-thought mechanism dynamically triggering explicit reasoning only when necessary. [[paper](https://arxiv.org/pdf/2601.08665)] [[website](https://wsakobe.github.io/VLingNav-web/)]
 - **RoboMIND**[2025-12-31]: Propose a hierarchical dual-system framework MIND-2 that integrates a high-level semantic planner with a low-level Vision-Language-Action executor optimized via offline reinforcement learning. [[paper](https://arxiv.org/pdf/2512.24653)] [[website](https://modelscope.cn/organization/X-Humanoid?tab=dataset)]
 - **Lumo-1**[2025-12-10]: Train with staged reasoning action alignment and flow matched action expert for efficient execution. [[paper](https://arxiv.org/pdf/2512.08580)] [[website](https://www.astribot.com/research/Lumo1)]
@@ -202,6 +205,7 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.2.3 Error Detection and Autonomous Recovery</strong></summary>
 
+- **NeuroVLA**[2026-01-21]: Bypasses high-latency cortical loops using force-sensitive spinal reflexes for immediate collision detection and withdrawal. [[paper](https://arxiv.org/pdf/2601.14628)] [[website](-)]
 - **Fast-ThinkAct**[2026-01-15]: Employ a verbalizer to decode latent representations into natural language for interpretable and grounded reasoning. [[paper](https://arxiv.org/pdf/2601.09708)] [[website](-)]
 - **CF-VLA**[2025-12-30]: Utilize a rollout-filter-label pipeline to mine failure cases and train the model for self-correction. [[paper](https://arxiv.org/pdf/2512.24426)] [[website](-)]
 - **EToT**[2025-12-09]: Utilizes Reflective Branching to diagnose execution failures within the simulator and iteratively refine the planning tree with corrective actions. [[paper](https://arxiv.org/pdf/2512.08188)] [[website](https://embodied-tree-of-thoughts.github.io/)]
@@ -220,6 +224,7 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.2.4 Real-Time Execution and Computing Efficiency</strong></summary>
 
+- **NeuroVLA**[2026-01-21]: Leverages event-driven spiking neural networks on neuromorphic hardware to achieve millisecond inference latency and extreme energy efficiency. [[paper](https://arxiv.org/pdf/2601.14628)] [[website](-)]
 - **Fast-ThinkAct**[2026-01-15]: Compress reasoning into compact verbalizable latent tokens via preference-guided distillation and visual trajectory alignment to enable real-time inference and failure recovery. [[paper](https://arxiv.org/pdf/2601.09708)] [[website](-)]
 - **LaST0**[2026-01-08]: Adopt a dual-system architecture with a reasoning expert for low-frequency inference and an acting expert for high-frequency actions. [[paper](https://arxiv.org/pdf/2601.05248)] [[website](https://sites.google.com/view/last0)]
 - **VLA-RAIL**[2025-12-31]: Propose a client-server asynchronous framework with intra-chunk smoothing and inter-chunk fusion to decouple inference from control and ensure smooth continuous motion. [[paper](https://arxiv.org/pdf/2512.24673)] [[website](-)]
@@ -269,6 +274,7 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.3.1 Open-World Generalization</strong></summary>
 
+- **TwinBrainVLA**[2026-01-20]: Decouples semantic understanding from embodied action estimation to preserve open-world capabilities. [[paper](https://arxiv.org/pdf/2601.14133)] [[website](https://github.com/ZGC-EmbodyAI/TwinBrainVLA)]
 - **CLAP**[2026-01-07]: Leverages large scale human demonstrations to learn a shared executable latent space enabling zero shot transfer to novel objects. [[paper](https://arxiv.org/pdf/2601.04061)] [[website](https://lin-shan.com/CLAP/)]
 - **Point-VLA**[2025-12-22]: Applies grounding-aware augmentations to decouple grounding from absolute coordinates reducing overfitting and adapting to varying visual perception. [[paper](https://arxiv.org/pdf/2512.18933)] [[website](-)]
 - **Real2Edit2Real**[2025-12-22]: Synthesize spatially diverse demonstrations by bridging 3D editability with 2D visual data via a 3D control interface. [[paper](https://arxiv.org/pdf/2512.19402)] [[website](https://real2edit2real.github.io/)]
@@ -346,6 +352,7 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.3.4 Online Interaction and Reinforcement Learning</strong></summary>
 
+- **SigEnt-SAC**[2026-01-22]: Introduces sigmoid bounded entropy to prevent negative entropy driven optimization toward out of distribution actions and uses gated behavior cloning to stabilize policy optimization. [[paper](https://arxiv.org/pdf/2601.15761)] [[website](-)]
 - **VLingNav**[2026-01-13]: Incorporates an online expert-guided reinforcement learning stage to acquire more robust self-explored navigation behaviors. [[paper](https://arxiv.org/pdf/2601.08665)] [[website](https://wsakobe.github.io/VLingNav-web/)]
 - **TT-VLA**[2026-01-11]: Formulates a dense reward mechanism leveraging step-by-step task-progress signals to refine action policies during test time via value-free PPO. [[paper](https://arxiv.org/pdf/2601.06748)] [[website](-)]
 - **Alpamayo-R1**[2026-01-08]: Adopts a multi-stage training strategy utilizing supervised fine-tuning and reinforcement learning to optimize reasoning quality and consistency. [[paper](https://arxiv.org/pdf/2511.00088)] [[website](https://github.com/NVlabs/alpamayo)]
@@ -376,6 +383,7 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.4.1 Reliability and Safety Assurance</strong></summary>
 
+- **DTP**[2026-01-22]: Develop a plug-and-play Distracting Token Pruning framework that dynamically detects and prunes task-irrelevant image tokens to correct visual attention patterns and improve task success rates. [[paper](https://arxiv.org/pdf/2601.16065)] [[website](https://anonymous.4open.science/r/CBD3)]
 - **CF-VLA**[2025-12-30]: Condition counterfactual reasoning on meta-actions to simulate outcomes and revise unsafe plans before execution. [[paper](https://arxiv.org/pdf/2512.24426)] [[website](-)]
 - **VLSA-AEGIS**[2025-12-09]: Introduce a plug-and-play safety constraint layer formulated via control barrier functions into VLA models. [[paper](https://arxiv.org/pdf/2512.11891)] [[website](https://vlsa-aegis.github.io/)]
 - **AutoRT**[2025]: Leverages structured prompting to encode multi level constraints. [[paper](https://arxiv.org/pdf/2401.12963)] [[website](https://auto-rt.github.io/)]
