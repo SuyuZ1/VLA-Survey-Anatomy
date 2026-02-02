@@ -50,6 +50,7 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.1.1 The GAP between Semantics Perception and Physical Interaction</strong></summary>
 
+- **TaF-VLA**[2026-01-28]: Grounds high-dimensional tactile observations in physical interaction forces via a tactile-force adapter using contrastive learning. [[paper](https://arxiv.org/pdf/2601.20321)] [[website](-)]
 - **TwinBrainVLA**[2026-01-20]: Synergizes a frozen generalist VLM with a trainable specialist VLM via Asymmetric Mixture-of-Transformers. [[paper](https://arxiv.org/pdf/2601.14133)] [[website](https://github.com/ZGC-EmbodyAI/TwinBrainVLA)]
 - **CLAP**[2026-01-07]: Aligns visual latent space from videos with executable robot action space using contrastive learning. [[paper](https://arxiv.org/pdf/2601.04061)] [[website](https://lin-shan.com/CLAP/)]
 - **DreamTacVLA**[2025-12-29]: Utilize Hierarchical Spatial Alignment loss to fuse multi-scale sensory streams and employ a tactile world model to predict future contact dynamics. [[paper](https://arxiv.org/pdf/2512.23864)] [[website](-)]
@@ -224,6 +225,8 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.2.4 Real-Time Execution and Computing Efficiency</strong></summary>
 
+- **DynamicVLA**[2026-01-29]: Integrates a compact VLA with continuous inference and latent-aware action streaming to enable real-time closed-loop adaptation. [[paper](https://arxiv.org/pdf/2601.22153)] [[website](https://haozhexie.com/project/dynamic-vla)]
+- **IROS**[2026-01-29]: Deploys a dual-process architecture that couples fast reflexive perception with conditional deliberative VLM reasoning to enable real-time navigation on embedded hardware. [[paper](https://arxiv.org/pdf/2601.21506)] [[website](-)]
 - **NeuroVLA**[2026-01-21]: Leverages event-driven spiking neural networks on neuromorphic hardware to achieve millisecond inference latency and extreme energy efficiency. [[paper](https://arxiv.org/pdf/2601.14628)] [[website](-)]
 - **Fast-ThinkAct**[2026-01-15]: Compress reasoning into compact verbalizable latent tokens via preference-guided distillation and visual trajectory alignment to enable real-time inference and failure recovery. [[paper](https://arxiv.org/pdf/2601.09708)] [[website](-)]
 - **LaST0**[2026-01-08]: Adopt a dual-system architecture with a reasoning expert for low-frequency inference and an acting expert for high-frequency actions. [[paper](https://arxiv.org/pdf/2601.05248)] [[website](https://sites.google.com/view/last0)]
@@ -397,6 +400,7 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.4.2 Interpretability and Trustworthy Interaction</strong></summary>
 
+- **AutoEval**[2026-01-26]: Employ AutoEval framework with GRPO to enhance logical reasoning capabilities and verify source authenticity. [[paper](https://arxiv.org/pdf/2601.18723)] [[website](https://term-bench.github.io/)]
 - **Alpamayo-R1**[2026-01-08]: Integrates Chain of Causation reasoning with trajectory planning to produce decision-grounded causally linked reasoning traces aligned with driving behaviors. [[paper](https://arxiv.org/pdf/2511.00088)] [[website](https://github.com/NVlabs/alpamayo)]
 - **Lumo-1**[2025-12-10]: Provide explicit reasoning traces for transparent decisions. [[paper](https://arxiv.org/pdf/2512.08580)] [[website](https://www.astribot.com/research/Lumo1)]
 - **ViFailback**[2025-12-03]: Use explicit on-frame visual symbols to provide interpretable corrective cues. [[paper](https://arxiv.org/pdf/2512.02787)] [[website](https://x1nyuzhou.github.io/vifailback.github.io)]
@@ -421,6 +425,8 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.5.1 Multi-Source Heterogeneous Data</strong></summary>
 
+- **AIR-VLA**[2026-01-29]: Construct a multimodal dataset of 3000 manually teleoperated demonstrations covering base manipulation and object spatial understanding and semantic reasoning and long-horizon planning. [[paper](https://arxiv.org/pdf/2601.21602)] [[website](https://anonymous.4open.science/r/AIR-VLA-dataset-B5CC/)]
+- **TaF-VLA**[2026-01-28]: Develops an automated data acquisition device to collect synchronized visuotactile images and force measurements at scale. [[paper](https://arxiv.org/pdf/2601.20321)] [[website](-)]
 - **VLingNav**[2026-01-13]: Constructs the largest embodied navigation dataset enriched with adaptive chain-of-thought annotations. [[paper](https://arxiv.org/pdf/2601.08665)] [[website](https://wsakobe.github.io/VLingNav-web/)]
 - **Alpamayo-R1**[2026-01-08]: Develops a structured Chain of Causation labeling framework utilizing a hybrid human-in-the-loop and auto-labeling pipeline. [[paper](https://arxiv.org/pdf/2511.00088)] [[website](https://github.com/NVlabs/alpamayo)]
 - **RoboMIND**[2025-12-31]: Construct a large-scale bimanual mobile manipulation dataset comprising over 300K trajectories collected from six heterogeneous robot embodiments with tactile sensing and digital twins. [[paper](https://arxiv.org/pdf/2512.24653)] [[website](https://modelscope.cn/organization/X-Humanoid?tab=dataset)]
@@ -466,6 +472,9 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.5.2 Evaluation and Benchmark</strong></summary>
 
+- **DynamicVLA**[2026-01-29]: Constructs the DOM benchmark using an automated pipeline to gather large-scale dynamic manipulation data across simulation and real-world. [[paper](https://arxiv.org/pdf/2601.22153)] [[website](https://haozhexie.com/project/dynamic-vla)]
+- **AIR-VLA**[2026-01-29]: Establish a physics-based simulation environment and propose multi-dimensional metrics to systematically evaluate mainstream VLA models and VLM models on aerial tasks. [[paper](https://arxiv.org/pdf/2601.21602)] [[website](https://anonymous.4open.science/r/AIR-VLA-dataset-B5CC/)]
+- **AutoEval**[2026-01-26]: Construct Eval-Actions benchmark explicitly integrating failure scenarios and mixed trajectory sources for diagnostic assessment. [[paper](https://arxiv.org/pdf/2601.18723)] [[website](https://term-bench.github.io/)]
 - **Diversity**[2026-01-06]: Perform a systematic dataset audit of widely used VLA corpora to characterize instruction language diversity using lexical semantic and structural metrics. [[paper](https://arxiv.org/pdf/2601.03136)] [[website](-)]
 - **PolaRiS**[2025-12-18]: Utilizes neural reconstruction methods to turn video scans into interactive simulation environments and develops a co-training recipe to bridge real-to-sim gaps. [[paper](https://arxiv.org/pdf/2512.16881)] [[website](https://polaris-evals.github.io)]
 - **VLSA-AEGIS**[2025-12-09]: Construct a comprehensive safety-critical benchmark SafeLIBERO spanning distinct manipulation scenarios with varying complexities. [[paper](https://arxiv.org/pdf/2512.11891)] [[website](https://vlsa-aegis.github.io/)]
