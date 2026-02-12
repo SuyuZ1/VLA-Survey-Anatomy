@@ -50,6 +50,7 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.1.1 The GAP between Semantics Perception and Physical Interaction</strong></summary>
 
+- **VISTA**[2026-02-04]: Align action prediction with visual input via preference optimization on a track-following surrogate task and transfer enhanced alignment through latent-space distillation. [[paper](https://arxiv.org/pdf/2602.05049)] [[website](https://vista-vla.github.io/)]
 - **TaF-VLA**[2026-01-28]: Grounds high-dimensional tactile observations in physical interaction forces via a tactile-force adapter using contrastive learning. [[paper](https://arxiv.org/pdf/2601.20321)] [[website](-)]
 - **TwinBrainVLA**[2026-01-20]: Synergizes a frozen generalist VLM with a trainable specialist VLM via Asymmetric Mixture-of-Transformers. [[paper](https://arxiv.org/pdf/2601.14133)] [[website](https://github.com/ZGC-EmbodyAI/TwinBrainVLA)]
 - **CLAP**[2026-01-07]: Aligns visual latent space from videos with executable robot action space using contrastive learning. [[paper](https://arxiv.org/pdf/2601.04061)] [[website](https://lin-shan.com/CLAP/)]
@@ -127,6 +128,8 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.1.3 Dynamic and Predictive World Models</strong></summary>
 
+- **World-VLA-Loop**[2026-02-06]: Refine a world model using a curated dataset of near-success trajectories and optimize the policy via virtual reinforcement learning within a closed loop. [[paper](https://arxiv.org/pdf/2602.06508)] [[website](https://showlab.github.io/World-VLA-Loop/)]
+- **LaRA-VLA**[2026-02-01]: Internalize multimodal reasoning into continuous latent representations through a curriculum-based training paradigm to enable efficient action-oriented control without explicit text generation. [[paper](https://arxiv.org/pdf/2602.01166)] [[website](https://lara-vla.github.io/)]
 - **LaST0**[2026-01-08]: Construct a latent spatio-temporal CoT space modeling future visual dynamics 3D structural information and robot proprioceptive states. [[paper](https://arxiv.org/pdf/2601.05248)] [[website](https://sites.google.com/view/last0)]
 - **InternVLA-A1**[2026-01-05]: Integrates understanding generation and action experts into a unified model to synergize semantic reasoning with dynamics prediction. [[paper](https://arxiv.org/pdf/2601.02456)] [[website](-)]
 - **SurgWorld**[2025-12-30]: Train a diffusion-based world model capable of generating photorealistic task-consistent surgical scenes using curated SATA dataset. [[paper](https://arxiv.org/pdf/2512.23162)] [[website](-)]
@@ -225,6 +228,7 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.2.4 Real-Time Execution and Computing Efficiency</strong></summary>
 
+- **QVLA**[2026-02-03]: Introduce a channel-wise bit allocation strategy based on action-space sensitivity to optimize VLA model compression for real-time robotic deployment. [[paper](https://arxiv.org/pdf/2602.03782)] [[website](https://github.com/AutoLab-SAI-SJTU/QVLA)]
 - **DynamicVLA**[2026-01-29]: Integrates a compact VLA with continuous inference and latent-aware action streaming to enable real-time closed-loop adaptation. [[paper](https://arxiv.org/pdf/2601.22153)] [[website](https://haozhexie.com/project/dynamic-vla)]
 - **IROS**[2026-01-29]: Deploys a dual-process architecture that couples fast reflexive perception with conditional deliberative VLM reasoning to enable real-time navigation on embedded hardware. [[paper](https://arxiv.org/pdf/2601.21506)] [[website](-)]
 - **NeuroVLA**[2026-01-21]: Leverages event-driven spiking neural networks on neuromorphic hardware to achieve millisecond inference latency and extreme energy efficiency. [[paper](https://arxiv.org/pdf/2601.14628)] [[website](-)]
