@@ -50,6 +50,7 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.1.1 The GAP between Semantics Perception and Physical Interaction</strong></summary>
 
+- **CAG**[2026-02-19]: Propose Counterfactual Action Guidance as a simple yet effective dual-branch inference scheme that explicitly regularizes language conditioning in VLAs. [[paper](https://arxiv.org/abs/2602.17659v1)] [[website](https://vla-va.github.io/)]
 - **VISTA**[2026-02-04]: Align action prediction with visual input via preference optimization on a track-following surrogate task and transfer enhanced alignment through latent-space distillation. [[paper](https://arxiv.org/pdf/2602.05049)] [[website](https://vista-vla.github.io/)]
 - **TaF-VLA**[2026-01-28]: Grounds high-dimensional tactile observations in physical interaction forces via a tactile-force adapter using contrastive learning. [[paper](https://arxiv.org/pdf/2601.20321)] [[website](-)]
 - **TwinBrainVLA**[2026-01-20]: Synergizes a frozen generalist VLM with a trainable specialist VLM via Asymmetric Mixture-of-Transformers. [[paper](https://arxiv.org/pdf/2601.14133)] [[website](https://github.com/ZGC-EmbodyAI/TwinBrainVLA)]
@@ -231,6 +232,7 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 - **QVLA**[2026-02-03]: Introduce a channel-wise bit allocation strategy based on action-space sensitivity to optimize VLA model compression for real-time robotic deployment. [[paper](https://arxiv.org/pdf/2602.03782)] [[website](https://github.com/AutoLab-SAI-SJTU/QVLA)]
 - **DynamicVLA**[2026-01-29]: Integrates a compact VLA with continuous inference and latent-aware action streaming to enable real-time closed-loop adaptation. [[paper](https://arxiv.org/pdf/2601.22153)] [[website](https://haozhexie.com/project/dynamic-vla)]
 - **IROS**[2026-01-29]: Deploys a dual-process architecture that couples fast reflexive perception with conditional deliberative VLM reasoning to enable real-time navigation on embedded hardware. [[paper](https://arxiv.org/pdf/2601.21506)] [[website](-)]
+- **AC2-VLA**[2026-01-27]: Propose an action-prior router that adaptively coordinates cognition caching token pruning and layer skipping supported by action-guided self-distillation. [[paper](https://arxiv.org/pdf/2601.19634v1)] [[website](https://github.com/SunnyYWD/AC-2-VLA)]
 - **NeuroVLA**[2026-01-21]: Leverages event-driven spiking neural networks on neuromorphic hardware to achieve millisecond inference latency and extreme energy efficiency. [[paper](https://arxiv.org/pdf/2601.14628)] [[website](-)]
 - **Fast-ThinkAct**[2026-01-15]: Compress reasoning into compact verbalizable latent tokens via preference-guided distillation and visual trajectory alignment to enable real-time inference and failure recovery. [[paper](https://arxiv.org/pdf/2601.09708)] [[website](-)]
 - **LaST0**[2026-01-08]: Adopt a dual-system architecture with a reasoning expert for low-frequency inference and an acting expert for high-frequency actions. [[paper](https://arxiv.org/pdf/2601.05248)] [[website](https://sites.google.com/view/last0)]
@@ -281,6 +283,7 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.3.1 Open-World Generalization</strong></summary>
 
+- **LAP**[2026-02-15]: Represent low-level robot actions directly in natural language to align action supervision with the pre-trained vision-language model input-output distribution. [[paper](https://arxiv.org/pdf/2602.10556v2)] [[website](https://lap-vla.github.io)]
 - **TwinBrainVLA**[2026-01-20]: Decouples semantic understanding from embodied action estimation to preserve open-world capabilities. [[paper](https://arxiv.org/pdf/2601.14133)] [[website](https://github.com/ZGC-EmbodyAI/TwinBrainVLA)]
 - **CLAP**[2026-01-07]: Leverages large scale human demonstrations to learn a shared executable latent space enabling zero shot transfer to novel objects. [[paper](https://arxiv.org/pdf/2601.04061)] [[website](https://lin-shan.com/CLAP/)]
 - **Point-VLA**[2025-12-22]: Applies grounding-aware augmentations to decouple grounding from absolute coordinates reducing overfitting and adapting to varying visual perception. [[paper](https://arxiv.org/pdf/2512.18933)] [[website](-)]
@@ -341,6 +344,7 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.3.3 Sim-to-Real Gap in Deployment</strong></summary>
 
+- **RL-Co**[2026-02-16]: Warm-start the policy with supervised fine-tuning on a mixture of real and simulated demonstrations. [[paper](https://arxiv.org/pdf/2602.12628)] [[website](https://github.com/RLinf/RLinf)]
 - **InternVLA-A1**[2026-01-05]: Utilizes a hybrid training strategy with synthetic and real datasets to harness simulation diversity while minimizing the sim-to-real gap. [[paper](https://arxiv.org/pdf/2601.02456)] [[website](-)]
 - **TwinAligner**[2025-12-22]: Enables policies trained in simulation to achieve strong zero shot generalization to the real world by addressing both visual and dynamic gaps. [[paper](https://arxiv.org/pdf/2512.19390)] [[website](https://twin-aligner.github.io)]
 - **MiVLA**[2025-12-17]: Utilizes kinematic rules with left/right hand coordinate systems for bidirectional alignment between human and robot action spaces. [[paper](https://arxiv.org/pdf/2512.15411)] [[website](-)]
@@ -359,6 +363,7 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.3.4 Online Interaction and Reinforcement Learning</strong></summary>
 
+- **RL-Co**[2026-02-16]: Fine-tune the policy with reinforcement learning in simulation while adding an auxiliary supervised loss on real-world data to anchor the policy. [[paper](https://arxiv.org/pdf/2602.12628)] [[website](https://github.com/RLinf/RLinf)]
 - **SigEnt-SAC**[2026-01-22]: Introduces sigmoid bounded entropy to prevent negative entropy driven optimization toward out of distribution actions and uses gated behavior cloning to stabilize policy optimization. [[paper](https://arxiv.org/pdf/2601.15761)] [[website](-)]
 - **VLingNav**[2026-01-13]: Incorporates an online expert-guided reinforcement learning stage to acquire more robust self-explored navigation behaviors. [[paper](https://arxiv.org/pdf/2601.08665)] [[website](https://wsakobe.github.io/VLingNav-web/)]
 - **TT-VLA**[2026-01-11]: Formulates a dense reward mechanism leveraging step-by-step task-progress signals to refine action policies during test time via value-free PPO. [[paper](https://arxiv.org/pdf/2601.06748)] [[website](-)]
@@ -476,6 +481,7 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.5.2 Evaluation and Benchmark</strong></summary>
 
+- **CAG**[2026-02-19]: Introduce LIBERO-CF as the first counterfactual benchmark to evaluate language following capability by assigning alternative instructions under visually plausible layouts. [[paper](https://arxiv.org/abs/2602.17659v1)] [[website](https://vla-va.github.io/)]
 - **DynamicVLA**[2026-01-29]: Constructs the DOM benchmark using an automated pipeline to gather large-scale dynamic manipulation data across simulation and real-world. [[paper](https://arxiv.org/pdf/2601.22153)] [[website](https://haozhexie.com/project/dynamic-vla)]
 - **AIR-VLA**[2026-01-29]: Establish a physics-based simulation environment and propose multi-dimensional metrics to systematically evaluate mainstream VLA models and VLM models on aerial tasks. [[paper](https://arxiv.org/pdf/2601.21602)] [[website](https://anonymous.4open.science/r/AIR-VLA-dataset-B5CC/)]
 - **AutoEval**[2026-01-26]: Construct Eval-Actions benchmark explicitly integrating failure scenarios and mixed trajectory sources for diagnostic assessment. [[paper](https://arxiv.org/pdf/2601.18723)] [[website](https://term-bench.github.io/)]
