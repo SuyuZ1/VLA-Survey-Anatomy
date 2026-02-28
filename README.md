@@ -50,6 +50,9 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.1.1 The GAP between Semantics Perception and Physical Interaction</strong></summary>
 
+- **JALA**[2026-02-25]: Learn a predictive action embedding aligned with both inverse dynamics and real actions. [[paper](https://arxiv.org/pdf/2602.21736)] [[website](https://research.beingbeyond.com/jala)]
+- **VLANeXt**[2026-02-24]: Systematically dissects design choices along foundational components perception essentials and action modelling perspectives to distill a practical recipe for building strong VLA models. [[paper](https://arxiv.org/pdf/2602.18532)] [[website](https://dravenalg.github.io/VLANeXt/)]
+- **SimVLA**[2026-02-23]: Strictly decouple perception from control using a standard vision language backbone and a lightweight action head. [[paper](https://arxiv.org/pdf/2602.18224)] [[website](https://frontierrobo.github.io/SimVLA)]
 - **CAG**[2026-02-19]: Propose Counterfactual Action Guidance as a simple yet effective dual-branch inference scheme that explicitly regularizes language conditioning in VLAs. [[paper](https://arxiv.org/abs/2602.17659v1)] [[website](https://vla-va.github.io/)]
 - **VISTA**[2026-02-04]: Align action prediction with visual input via preference optimization on a track-following surrogate task and transfer enhanced alignment through latent-space distillation. [[paper](https://arxiv.org/pdf/2602.05049)] [[website](https://vista-vla.github.io/)]
 - **TaF-VLA**[2026-01-28]: Grounds high-dimensional tactile observations in physical interaction forces via a tactile-force adapter using contrastive learning. [[paper](https://arxiv.org/pdf/2601.20321)] [[website](-)]
@@ -129,6 +132,7 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.1.3 Dynamic and Predictive World Models</strong></summary>
 
+- **WoVR**[2026-02-15]: Build a rollout-stable action-controllable video world model with dual-channel action injection and first-frame anchoring. [[paper](https://arxiv.org/pdf/2602.13977)] [[website](https://github.com/RLinf/RLinf)]
 - **World-VLA-Loop**[2026-02-06]: Refine a world model using a curated dataset of near-success trajectories and optimize the policy via virtual reinforcement learning within a closed loop. [[paper](https://arxiv.org/pdf/2602.06508)] [[website](https://showlab.github.io/World-VLA-Loop/)]
 - **LaRA-VLA**[2026-02-01]: Internalize multimodal reasoning into continuous latent representations through a curriculum-based training paradigm to enable efficient action-oriented control without explicit text generation. [[paper](https://arxiv.org/pdf/2602.01166)] [[website](https://lara-vla.github.io/)]
 - **LaST0**[2026-01-08]: Construct a latent spatio-temporal CoT space modeling future visual dynamics 3D structural information and robot proprioceptive states. [[paper](https://arxiv.org/pdf/2601.05248)] [[website](https://sites.google.com/view/last0)]
@@ -364,6 +368,7 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <summary><strong>4.3.4 Online Interaction and Reinforcement Learning</strong></summary>
 
 - **RL-Co**[2026-02-16]: Fine-tune the policy with reinforcement learning in simulation while adding an auxiliary supervised loss on real-world data to anchor the policy. [[paper](https://arxiv.org/pdf/2602.12628)] [[website](https://github.com/RLinf/RLinf)]
+- **WoVR**[2026-02-15]: Regulate hallucination through Keyframe-Initialized Rollouts and a policy-aligned co-evolution strategy for stable on-policy optimization entirely in imagination. [[paper](https://arxiv.org/pdf/2602.13977)] [[website](https://github.com/RLinf/RLinf)]
 - **SigEnt-SAC**[2026-01-22]: Introduces sigmoid bounded entropy to prevent negative entropy driven optimization toward out of distribution actions and uses gated behavior cloning to stabilize policy optimization. [[paper](https://arxiv.org/pdf/2601.15761)] [[website](-)]
 - **VLingNav**[2026-01-13]: Incorporates an online expert-guided reinforcement learning stage to acquire more robust self-explored navigation behaviors. [[paper](https://arxiv.org/pdf/2601.08665)] [[website](https://wsakobe.github.io/VLingNav-web/)]
 - **TT-VLA**[2026-01-11]: Formulates a dense reward mechanism leveraging step-by-step task-progress signals to refine action policies during test time via value-free PPO. [[paper](https://arxiv.org/pdf/2601.06748)] [[website](-)]
@@ -434,6 +439,7 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.5.1 Multi-Source Heterogeneous Data</strong></summary>
 
+- **JALA**[2026-02-25]: Construct UniHand-Mix hybrid corpus blending laboratory and in-the-wild human manipulation footage. [[paper](https://arxiv.org/pdf/2602.21736)] [[website](https://research.beingbeyond.com/jala)]
 - **AIR-VLA**[2026-01-29]: Construct a multimodal dataset of 3000 manually teleoperated demonstrations covering base manipulation and object spatial understanding and semantic reasoning and long-horizon planning. [[paper](https://arxiv.org/pdf/2601.21602)] [[website](https://anonymous.4open.science/r/AIR-VLA-dataset-B5CC/)]
 - **TaF-VLA**[2026-01-28]: Develops an automated data acquisition device to collect synchronized visuotactile images and force measurements at scale. [[paper](https://arxiv.org/pdf/2601.20321)] [[website](-)]
 - **VLingNav**[2026-01-13]: Constructs the largest embodied navigation dataset enriched with adaptive chain-of-thought annotations. [[paper](https://arxiv.org/pdf/2601.08665)] [[website](https://wsakobe.github.io/VLingNav-web/)]
@@ -481,6 +487,7 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.5.2 Evaluation and Benchmark</strong></summary>
 
+- **SimVLA**[2026-02-23]: Establish a transparent reference point for VLA research by standardizing critical training dynamics. [[paper](https://arxiv.org/pdf/2602.18224)] [[website](https://frontierrobo.github.io/SimVLA)]
 - **CAG**[2026-02-19]: Introduce LIBERO-CF as the first counterfactual benchmark to evaluate language following capability by assigning alternative instructions under visually plausible layouts. [[paper](https://arxiv.org/abs/2602.17659v1)] [[website](https://vla-va.github.io/)]
 - **DynamicVLA**[2026-01-29]: Constructs the DOM benchmark using an automated pipeline to gather large-scale dynamic manipulation data across simulation and real-world. [[paper](https://arxiv.org/pdf/2601.22153)] [[website](https://haozhexie.com/project/dynamic-vla)]
 - **AIR-VLA**[2026-01-29]: Establish a physics-based simulation environment and propose multi-dimensional metrics to systematically evaluate mainstream VLA models and VLM models on aerial tasks. [[paper](https://arxiv.org/pdf/2601.21602)] [[website](https://anonymous.4open.science/r/AIR-VLA-dataset-B5CC/)]
