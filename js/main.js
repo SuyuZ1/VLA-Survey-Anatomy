@@ -87,6 +87,14 @@ function getWeekRange(date) {
     return { weekStart, weekEnd };
 }
 
+// Sanitize a URL value coming from CSV data to prevent XSS (e.g. javascript: URIs)
+// or HTML injection when interpolated into href attributes.
+function sanitizeUrl(url) {
+    const str = String(url || '').trim();
+    if (!/^https?:\/\//i.test(str)) return '';
+    return str.replace(/"/g, '%22');
+}
+
 // Load CSV file
 async function loadCSV() {
     try {
@@ -400,10 +408,10 @@ function updateTable() {
         const websiteUrl = row['Website URL'] || '';
         let linkContent = '';
         if (paperUrl) {
-            linkContent += `<a href="${paperUrl}" target="_blank" class="link mr-2">Paper</a>`;
+            linkContent += `<a href="${sanitizeUrl(paperUrl)}" target="_blank" class="link mr-2">Paper</a>`;
         }
         if (websiteUrl) {
-            linkContent += `<a href="${websiteUrl}" target="_blank" class="link">Website</a>`;
+            linkContent += `<a href="${sanitizeUrl(websiteUrl)}" target="_blank" class="link">Website</a>`;
         }
         tr.innerHTML += `<td>${linkContent || '-'}</td>`;
         
@@ -895,10 +903,10 @@ function renderLatestCards(latestData) {
         if (row["Paper URL"] || row["Website URL"]) {
             linkHTML = "";
             if (row["Paper URL"]) {
-                linkHTML += `<a href="${row["Paper URL"]}" target="_blank" class="mr-2">Paper</a>`;
+                linkHTML += `<a href="${sanitizeUrl(row["Paper URL"])}" target="_blank" class="mr-2">Paper</a>`;
             }
             if (row["Website URL"]) {
-                linkHTML += `<a href="${row["Website URL"]}" target="_blank">Website</a>`;
+                linkHTML += `<a href="${sanitizeUrl(row["Website URL"])}" target="_blank">Website</a>`;
             }
         }
 
