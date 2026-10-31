@@ -214,6 +214,7 @@ We identify **five fundamental challenges**, each further decomposed into **sub-
 <details>
 <summary><strong>4.2.3 Error Detection and Autonomous Recovery</strong></summary>
 
+- **Spotter**[2026-09-29]: Run a VLM screener in parallel with a frozen VLA policy and call a VLM judge only on confirmed errors, which repairs them with motion primitives and hands control back without scene resets. [[paper](https://arxiv.org/pdf/2609.36808)] [[website](https://zqc3117.github.io/Spotter/)]
 - **NeuroVLA**[2026-01-21]: Bypasses high-latency cortical loops using force-sensitive spinal reflexes for immediate collision detection and withdrawal. [[paper](https://arxiv.org/pdf/2601.14628)] [[website](-)]
 - **Fast-ThinkAct**[2026-01-15]: Employ a verbalizer to decode latent representations into natural language for interpretable and grounded reasoning. [[paper](https://arxiv.org/pdf/2601.09708)] [[website](-)]
 - **CF-VLA**[2025-12-30]: Utilize a rollout-filter-label pipeline to mine failure cases and train the model for self-correction. [[paper](https://arxiv.org/pdf/2512.24426)] [[website](-)]
